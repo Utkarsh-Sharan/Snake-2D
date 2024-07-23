@@ -1,0 +1,1627 @@
+fileFormatVersion: 2
+guid: f4ea7530ea1f05c48b1189b2c7b2f40b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 317
+        width: 93
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cda90a719514db41bf52e79f967f024
+      internalID: -1478431111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 315
+        width: 120
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35fcd7bcd714a8c43902d412e6cb685d
+      internalID: -1972365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_2
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 315
+        width: 80
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff7a876fb5d34d4ba02cb9a190f156a
+      internalID: -608982704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_3
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 315
+        width: 102
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbabc73082fdc6b46ae1fad9481018d0
+      internalID: -709009887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_4
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 317
+        width: 95
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd480d9511faec4dbf668b57eb675d3
+      internalID: 1984347000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_5
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 312
+        width: 89
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a753702605eae745b63ccb95701892b
+      internalID: 1707286183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_6
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 315
+        width: 85
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b300548a3849c98489aee9a0905603c9
+      internalID: -1026855859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_7
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 314
+        width: 90
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3784e154e0bc6747b3c5cc970cbd5e2
+      internalID: -838402802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_8
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 323
+        width: 109
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c3a25c37794a441b86d59474165b5e
+      internalID: -347818152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_9
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 312
+        width: 94
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264821f5f6c59bb4cbc4e2d622a36f9d
+      internalID: -162830229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_10
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 315
+        width: 103
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e24eec679183a49a6ee61b35acfc2b
+      internalID: -879673172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_11
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 315
+        width: 106
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b267d416ca08642b73b5be654bca61
+      internalID: 588190191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_12
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 325
+        width: 115
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4dcd91832906a45950253ef5efc8f4
+      internalID: -2024095346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_13
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 319
+        width: 100
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a7b5d2df6a71f46a162ac62d791747
+      internalID: 725993640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_14
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 325
+        width: 97
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff8af5e064dfe54a8c7cf967007bee1
+      internalID: 1964160697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_15
+      rect:
+        serializedVersion: 2
+        x: 1961
+        y: 328
+        width: 113
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df660ea0ed791149a2cf6d31eff2628
+      internalID: -1008708655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_16
+      rect:
+        serializedVersion: 2
+        x: 2101
+        y: 317
+        width: 93
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a15b90242029d246af84508b2bfa383
+      internalID: -973029242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_17
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 321
+        width: 110
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a731ec85fc27eef448b706b9dbf78148
+      internalID: 611459076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_18
+      rect:
+        serializedVersion: 2
+        x: 2349
+        y: 319
+        width: 115
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12295ebae95c35a41a5892fea180d5a3
+      internalID: 480359332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_19
+      rect:
+        serializedVersion: 2
+        x: 2494
+        y: 317
+        width: 87
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f3c896a9dd0434c80bc109b810569d
+      internalID: 1838364009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_20
+      rect:
+        serializedVersion: 2
+        x: 2612
+        y: 326
+        width: 113
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1597265107b3d4d85c714d9f3ddc7c
+      internalID: 159528602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_21
+      rect:
+        serializedVersion: 2
+        x: 2742
+        y: 323
+        width: 111
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88bacc0aae28be46aa67684725ec957
+      internalID: -1705843995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 154
+        width: 115
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d547d8c4f9c9fcc4e925b43ee68cffed
+      internalID: -439805090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_23
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 143
+        width: 154
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a067678b3bd791f418ea87367ac332bd
+      internalID: -104682005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_24
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 143
+        width: 113
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbd481d12709cc44afc1cc18ff92ae8
+      internalID: -80288356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_25
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 143
+        width: 135
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e5d63cc99c0994fabd1a500f66a116
+      internalID: 287009381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_26
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 154
+        width: 135
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a42a4618b0c6b94dad4dd01d5a359f5
+      internalID: 1867929804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_27
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 143
+        width: 115
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6246296bbf0981d4fb52bd39f476019e
+      internalID: -763737831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_28
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 143
+        width: 115
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8a08634a28ead4fa31b61212563f43
+      internalID: 706340518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_29
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 143
+        width: 135
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479c436db01edc544879fdd7a61c24c4
+      internalID: 1014246673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_30
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 154
+        width: 135
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47ab37ceb4c0be4eadba89b259bd421
+      internalID: 1430314268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_31
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 143
+        width: 115
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68d2bc78f5e00f4b8640f8fd79bac19
+      internalID: 579843037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_32
+      rect:
+        serializedVersion: 2
+        x: 1731
+        y: 143
+        width: 156
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5426219abcf9fa438bc92fa11ad9027
+      internalID: 1080858526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_33
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 143
+        width: 156
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf85c3955585a0a489c660e3c9f33c9b
+      internalID: -1934039250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_34
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 154
+        width: 174
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900f14ca1dc949543a7ecb25b17721a2
+      internalID: -342808432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_35
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 143
+        width: 144
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b381316e33d92c489b5b4f1922bdfd2
+      internalID: -759895233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_36
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 154
+        width: 135
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391dd0e89d0d6274f882b2b9ecf9790b
+      internalID: -414294965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_37
+      rect:
+        serializedVersion: 2
+        x: 2601
+        y: 164
+        width: 135
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a7b6a533222304d90cb60eba94b7cd
+      internalID: 2022893104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_38
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 143
+        width: 115
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9241fac927d2774bba8d0b9cf843c15
+      internalID: 959627908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_39
+      rect:
+        serializedVersion: 2
+        x: 2945
+        y: 143
+        width: 135
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16a3f8d813226c4ca56c5cb3bc507b8
+      internalID: 37364596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_40
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 143
+        width: 154
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ecb2942b8cf8b745b00a081715f4ce1
+      internalID: -1581755387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_41
+      rect:
+        serializedVersion: 2
+        x: 3301
+        y: 143
+        width: 113
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a85bf3088616234582033b727061d73
+      internalID: 1565378737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_42
+      rect:
+        serializedVersion: 2
+        x: 3452
+        y: 154
+        width: 154
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cde3416a978dcc4b9a43d8b27fded86
+      internalID: 1165908321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_43
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 166
+        width: 134
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c3bea9de6ee7745a87be617f26d9bc
+      internalID: 1931045944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_44
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 6
+        width: 122
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96913ebb312a4fa4bb6ac09faca341c2
+      internalID: 1154562171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_45
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 4
+        width: 115
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad17010cac535e4ea9ad4a3fab06251
+      internalID: 386122975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_46
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 3
+        width: 74
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc8d875d2626b84a9da2015e7335be1
+      internalID: -631792145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_47
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 98
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967e643b66eae2647a0f81b13ba16ae9
+      internalID: -1139987261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_48
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 6
+        width: 118
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d865bbb2a8b4b4cabd18a445091e1b
+      internalID: 1073828899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_49
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 0
+        width: 90
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bffbe02738a504d4f97482cebb5c2554
+      internalID: 1245113036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_50
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 3
+        width: 89
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3c06fc0a532ad419af703723df476e
+      internalID: -1540079662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_51
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 5
+        width: 102
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43019a56223ab547ba87f2ec70ce322
+      internalID: 1330546951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_52
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 10
+        width: 107
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefc8d173635e904f924b5aa5ec0c118
+      internalID: 1571984015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_53
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 0
+        width: 102
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67a89284ea859640b4dd5c5b31d8798
+      internalID: -398379427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_54
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 5
+        width: 128
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5ec4e09b59d3f4f81d8dfdfef08bef
+      internalID: -1873912234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_55
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 6
+        width: 124
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de88b551865b7b44ad09d4acb1754bb
+      internalID: -174597326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_56
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 14
+        width: 131
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a29c20a08494394fa92dbe9001d5dbe
+      internalID: 2062123430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_57
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 1
+        width: 102
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f622659dc8f20446acfb97da28e719b
+      internalID: -113395148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_58
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 12
+        width: 106
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15569523ccc6d942b757dfd3f491438
+      internalID: 2057547472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_59
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 19
+        width: 122
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3b204e4af07e14782bbf7b74335907
+      internalID: -1185707000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_60
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 6
+        width: 109
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b82ff9104e1254d9e22d9b03c54d08
+      internalID: -5287742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_61
+      rect:
+        serializedVersion: 2
+        x: 2216
+        y: 10
+        width: 118
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222f04d3936df5442a98d99d71c900e0
+      internalID: 258112598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_62
+      rect:
+        serializedVersion: 2
+        x: 2349
+        y: 6
+        width: 113
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db16e1c65d5e35a49af5199115dd1f0b
+      internalID: -454889824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_63
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 6
+        width: 113
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbdc8a329f8802468b7840b918c6bf0
+      internalID: 1277580373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_64
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 6
+        width: 102
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c30df289caea54a8d7cb7a043d46d1
+      internalID: -1522684501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_65
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 16
+        width: 116
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aaf2b28b470a1a499c1d01189116a10
+      internalID: -417106228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Google Snake Game - Food_66
+      rect:
+        serializedVersion: 2
+        x: 2860
+        y: 14
+        width: 124
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8fbd8a995147e4597ee47bec74f59f
+      internalID: -2096610690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Browser Games - Google Snake Game - Food_0: -1478431111
+      Browser Games - Google Snake Game - Food_1: -1972365
+      Browser Games - Google Snake Game - Food_10: -879673172
+      Browser Games - Google Snake Game - Food_11: 588190191
+      Browser Games - Google Snake Game - Food_12: -2024095346
+      Browser Games - Google Snake Game - Food_13: 725993640
+      Browser Games - Google Snake Game - Food_14: 1964160697
+      Browser Games - Google Snake Game - Food_15: -1008708655
+      Browser Games - Google Snake Game - Food_16: -973029242
+      Browser Games - Google Snake Game - Food_17: 611459076
+      Browser Games - Google Snake Game - Food_18: 480359332
+      Browser Games - Google Snake Game - Food_19: 1838364009
+      Browser Games - Google Snake Game - Food_2: -608982704
+      Browser Games - Google Snake Game - Food_20: 159528602
+      Browser Games - Google Snake Game - Food_21: -1705843995
+      Browser Games - Google Snake Game - Food_22: -439805090
+      Browser Games - Google Snake Game - Food_23: -104682005
+      Browser Games - Google Snake Game - Food_24: -80288356
+      Browser Games - Google Snake Game - Food_25: 287009381
+      Browser Games - Google Snake Game - Food_26: 1867929804
+      Browser Games - Google Snake Game - Food_27: -763737831
+      Browser Games - Google Snake Game - Food_28: 706340518
+      Browser Games - Google Snake Game - Food_29: 1014246673
+      Browser Games - Google Snake Game - Food_3: -709009887
+      Browser Games - Google Snake Game - Food_30: 1430314268
+      Browser Games - Google Snake Game - Food_31: 579843037
+      Browser Games - Google Snake Game - Food_32: 1080858526
+      Browser Games - Google Snake Game - Food_33: -1934039250
+      Browser Games - Google Snake Game - Food_34: -342808432
+      Browser Games - Google Snake Game - Food_35: -759895233
+      Browser Games - Google Snake Game - Food_36: -414294965
+      Browser Games - Google Snake Game - Food_37: 2022893104
+      Browser Games - Google Snake Game - Food_38: 959627908
+      Browser Games - Google Snake Game - Food_39: 37364596
+      Browser Games - Google Snake Game - Food_4: 1984347000
+      Browser Games - Google Snake Game - Food_40: -1581755387
+      Browser Games - Google Snake Game - Food_41: 1565378737
+      Browser Games - Google Snake Game - Food_42: 1165908321
+      Browser Games - Google Snake Game - Food_43: 1931045944
+      Browser Games - Google Snake Game - Food_44: 1154562171
+      Browser Games - Google Snake Game - Food_45: 386122975
+      Browser Games - Google Snake Game - Food_46: -631792145
+      Browser Games - Google Snake Game - Food_47: -1139987261
+      Browser Games - Google Snake Game - Food_48: 1073828899
+      Browser Games - Google Snake Game - Food_49: 1245113036
+      Browser Games - Google Snake Game - Food_5: 1707286183
+      Browser Games - Google Snake Game - Food_50: -1540079662
+      Browser Games - Google Snake Game - Food_51: 1330546951
+      Browser Games - Google Snake Game - Food_52: 1571984015
+      Browser Games - Google Snake Game - Food_53: -398379427
+      Browser Games - Google Snake Game - Food_54: -1873912234
+      Browser Games - Google Snake Game - Food_55: -174597326
+      Browser Games - Google Snake Game - Food_56: 2062123430
+      Browser Games - Google Snake Game - Food_57: -113395148
+      Browser Games - Google Snake Game - Food_58: 2057547472
+      Browser Games - Google Snake Game - Food_59: -1185707000
+      Browser Games - Google Snake Game - Food_6: -1026855859
+      Browser Games - Google Snake Game - Food_60: -5287742
+      Browser Games - Google Snake Game - Food_61: 258112598
+      Browser Games - Google Snake Game - Food_62: -454889824
+      Browser Games - Google Snake Game - Food_63: 1277580373
+      Browser Games - Google Snake Game - Food_64: -1522684501
+      Browser Games - Google Snake Game - Food_65: -417106228
+      Browser Games - Google Snake Game - Food_66: -2096610690
+      Browser Games - Google Snake Game - Food_7: -838402802
+      Browser Games - Google Snake Game - Food_8: -347818152
+      Browser Games - Google Snake Game - Food_9: -162830229
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
