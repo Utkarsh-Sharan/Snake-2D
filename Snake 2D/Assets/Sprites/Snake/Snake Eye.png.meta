@@ -139,19 +139,19 @@ TextureImporter:
       name: Snake Eye_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 28
-        height: 28
+        x: 1
+        y: 2
+        width: 26
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 1, y: 1, z: 1, w: 1}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b146b45239fdb7c46a07d896eaf40384
-      internalID: 1493507996
+      spriteID: df9efc15ecb9d1d46aeba43b6ed14ed9
+      internalID: 721089871
       vertices: []
       indices: 
       edges: []
@@ -167,7 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Snake Eye_0: 1493507996
+      Snake Eye_0: 721089871
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
