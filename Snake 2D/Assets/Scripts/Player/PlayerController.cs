@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D _rigidBody;
-    [SerializeField] private GameObject _snakeBody;
+    [SerializeField] private Transform _snakeBody;
 
-    private float _speed = 5.0f;
     private int _snakeBodySize;
+    private float _snakeSpeed = 10f;
 
-    private Vector2 _snakePosition;
+    private Vector2 _snakeMove;
     private MovementDirection _movementDirection;
 
-    private List<Vector2> _snakePositionList;
     private List<Transform> _snakeBodyTransformList;
 
     private void Start()
     {
-        _snakePosition = new Vector2(10f, 10f);
-        transform.position = new Vector3(_snakePosition.x, _snakePosition.y, 0f);
+        transform.position = new Vector3(10f, 10f, 0f);
 
-        _snakePositionList = new List<Vector2>();
         _snakeBodyTransformList = new List<Transform>();
+        _snakeBodyTransformList.Add(this.transform);
     }
 
     private void Update()
@@ -37,43 +34,43 @@ public class PlayerController : MonoBehaviour
 
     private void Movement()
     {
-        _snakePositionList.Insert(0, _snakePosition);
-
         if (Input.GetKeyDown(KeyCode.W) && _movementDirection != MovementDirection.DOWN)
         {
-            _rigidBody.velocity = Vector2.up * _speed;
+            _snakeMove = Vector2.up;
             _movementDirection = MovementDirection.UP;
             HandleSnakeFaceDirection(_movementDirection);
         }
         else if (Input.GetKeyDown(KeyCode.D) && _movementDirection != MovementDirection.LEFT)
         {
-            _rigidBody.velocity = Vector2.right * _speed;
+            _snakeMove = Vector2.right;
             _movementDirection = MovementDirection.RIGHT;
             HandleSnakeFaceDirection(_movementDirection);
         }
         else if (Input.GetKeyDown(KeyCode.A) && _movementDirection != MovementDirection.RIGHT)
         {
-            _rigidBody.velocity = Vector2.left * _speed;
+            _snakeMove = Vector2.left;
             _movementDirection = MovementDirection.LEFT;
             HandleSnakeFaceDirection(_movementDirection);
         }
         else if (Input.GetKeyDown(KeyCode.S) && _movementDirection != MovementDirection.UP)
         {
-            _rigidBody.velocity = Vector2.down * _speed;
+            _snakeMove = Vector2.down;
             _movementDirection = MovementDirection.DOWN;
             HandleSnakeFaceDirection(_movementDirection);
         }
+    }
 
-        if (_snakePositionList.Count >= _snakeBodySize + 1)
+    private void FixedUpdate()
+    {
+        for (int i = _snakeBodyTransformList.Count - 1; i > 0; i--)
         {
-            _snakePositionList.RemoveAt(_snakePositionList.Count - 1);
+            _snakeBodyTransformList[i].position = _snakeBodyTransformList[i - 1].position;
         }
 
-        for (int i = 0; i < _snakeBodyTransformList.Count; i++)
-        {
-            Vector3 snakeBodyPosition = new Vector3(_snakePositionList[i].x, _snakePositionList[i].y, 0);
-            _snakeBodyTransformList[i].position = snakeBodyPosition;
-        }
+        this.transform.position = new Vector3(
+                                         Mathf.Round(this.transform.position.x + _snakeMove.x),
+                                         Mathf.Round(this.transform.position.y + _snakeMove.y),
+                                         0f);
     }
 
     private void HandleSnakeFaceDirection(MovementDirection faceDirection)
@@ -81,7 +78,6 @@ public class PlayerController : MonoBehaviour
         switch (faceDirection)
         {
             case MovementDirection.UP:
-                transform.eulerAngles = new Vector3(0, 0, 0);
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 break;
 
@@ -104,8 +100,9 @@ public class PlayerController : MonoBehaviour
 
     private void CreateSnakeBody()
     {
-        _snakeBodyTransformList.Add(_snakeBody.transform);
-        Instantiate(_snakeBody, _snakeBody.transform);
+        Transform snakeBody = Instantiate(this._snakeBody);
+        snakeBody.position = _snakeBodyTransformList[_snakeBodyTransformList.Count - 1].position;
+        _snakeBodyTransformList.Add(snakeBody);
     }
 }
 

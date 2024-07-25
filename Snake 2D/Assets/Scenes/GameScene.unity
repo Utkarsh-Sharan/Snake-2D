@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidBody: {fileID: 745171022}
-  _snakeBody: {fileID: 8180678439371988418, guid: 1dc87a0b9be5205438148ae2dde1132a, type: 3}
+  _snakeBody: {fileID: 963008492839025338, guid: 1dc87a0b9be5205438148ae2dde1132a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
