@@ -5,35 +5,64 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Transform _snakeBody;
+    [SerializeField] private Camera _camera;
 
     private int _snakeBodySize;
 
     private Vector2 _snakeMove;
     private MovementDirection _movementDirection;
 
+    private float _screenWidth;
+    private float _screenHeight;
+
     private List<Transform> _snakeBodyTransformList;
 
     private void Start()
     {
-        transform.position = new Vector3(10f, 10f, 0f);
+        transform.position = new Vector3(0f, 0f, 0f);       //snake's initial position
 
-        _snakeBodyTransformList = new List<Transform>();
-        _snakeBodyTransformList.Add(this.transform);
+        _snakeBodyTransformList = new List<Transform>();    //initializing transform list
+        _snakeBodyTransformList.Add(this.transform);        //adding snake's head to the list
+
+        float cameraHeight = _camera.orthographicSize * 2;  //as camera's orthographic size is half the height
+        float cameraWidth = cameraHeight * _camera.aspect;  //as camera's aspect ratio = width/height
+
+        _screenWidth = cameraWidth / 2;
+        _screenHeight = cameraHeight / 2;
     }
 
     private void Update()
     {
         Movement();
-        if(Input.GetMouseButtonDown(0))
+        WrapSnakeBody();
+        if (Input.GetMouseButtonDown(0))    //only for testing
         {
             _snakeBodySize++;
             CreateSnakeBody();
         }
-        if(Input.GetMouseButtonDown(1))
+        if(Input.GetMouseButtonDown(1))     //only for testing
         {
             _snakeBodySize--;
             DestroySnakeBody();
         }
+        
+    }
+
+    private void FixedUpdate()
+    {
+        //adds body parts from back
+        for (int i = _snakeBodyTransformList.Count - 1; i > 0; i--)
+        {
+            _snakeBodyTransformList[i].position = _snakeBodyTransformList[i - 1].position;
+        }
+        
+        //rigidbody movement
+        this.transform.position = new Vector3(
+                                         Mathf.Round(this.transform.position.x + _snakeMove.x),
+                                         Mathf.Round(this.transform.position.y + _snakeMove.y),
+                                         0f);
+        //wrapping snake's body
+        WrapSnakeBody();
     }
 
     private void Movement()
@@ -63,21 +92,6 @@ public class PlayerController : MonoBehaviour
         HandleSnakeFaceDirection(_movementDirection);
     }
 
-    private void FixedUpdate()
-    {
-        //adds body parts from back
-        for (int i = _snakeBodyTransformList.Count - 1; i > 0; i--)
-        {
-            _snakeBodyTransformList[i].position = _snakeBodyTransformList[i - 1].position;
-        }
-
-        //rigidbody movement
-        this.transform.position = new Vector3(
-                                         Mathf.Round(this.transform.position.x + _snakeMove.x),
-                                         Mathf.Round(this.transform.position.y + _snakeMove.y),
-                                         0f);
-    }
-
     private void HandleSnakeFaceDirection(MovementDirection faceDirection)
     {
         switch (faceDirection)
@@ -101,6 +115,33 @@ public class PlayerController : MonoBehaviour
                 transform.eulerAngles = new Vector3(0, 0, -90);
                 break;
         }
+    }
+
+    private void WrapSnakeBody()
+    {
+        Vector3 snakeHeadPosition = _snakeBodyTransformList[0].position;
+
+        //checking at x-axis
+        if (snakeHeadPosition.x > _screenWidth)
+        {
+            snakeHeadPosition.x = -_screenWidth;
+        }
+        else if (snakeHeadPosition.x < -_screenWidth)
+        {
+            snakeHeadPosition.x = _screenWidth;
+        }
+
+        //checking at y-axis
+        if (snakeHeadPosition.y > _screenHeight)
+        {
+            snakeHeadPosition.y = -_screenHeight;
+        }
+        else if (snakeHeadPosition.y < -_screenHeight)
+        {
+            snakeHeadPosition.y = _screenHeight;
+        }
+
+        _snakeBodyTransformList[0].position = snakeHeadPosition;
     }
 
     public void CreateSnakeBody()
