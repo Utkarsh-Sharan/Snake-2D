@@ -2,18 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class FoodController : MonoBehaviour
+public class FoodController : MonoBehaviour
 {
     [SerializeField] protected BoxCollider2D foodSpawnArea;
     [SerializeField] protected PlayerController playerController;
 
-    // Start is called before the first frame update
-    protected void Start()
-    {
-        RandomizePosition();
-    }
+    protected float _spawnInterval = 3f;
 
-    protected void RandomizePosition()
+    protected void RandomizeFoodPosition()
     {
         Bounds bounds = foodSpawnArea.bounds;
 
@@ -23,5 +19,5 @@ public abstract class FoodController : MonoBehaviour
         transform.position = new Vector3(Mathf.Round(boundX), Mathf.Round(boundY), 0f);
     }
 
-    protected abstract void OnTriggerEnter2D(Collider2D other);
+    protected virtual void OnTriggerEnter2D(Collider2D other) { }
 }
