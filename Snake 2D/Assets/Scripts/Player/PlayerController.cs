@@ -19,10 +19,10 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        transform.position = new Vector3(0f, 0f, 0f);
+        transform.position = new Vector3(0f, 0f, 0f);       //snake's initial position
 
-        _snakeBodyTransformList = new List<Transform>();
-        _snakeBodyTransformList.Add(this.transform);
+        _snakeBodyTransformList = new List<Transform>();    //initializing transform list
+        _snakeBodyTransformList.Add(this.transform);        //adding snake's head to the list
 
         float cameraHeight = _camera.orthographicSize * 2;  //as camera's orthographic size is half the height
         float cameraWidth = cameraHeight * _camera.aspect;  //as camera's aspect ratio = width/height
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Movement();
-        WrapSnake();
+        WrapSnakeBody();
         if (Input.GetMouseButtonDown(0))    //only for testing
         {
             _snakeBodySize++;
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
                                          Mathf.Round(this.transform.position.y + _snakeMove.y),
                                          0f);
         //wrapping snake's body
-        WrapSnake();
+        WrapSnakeBody();
     }
 
     private void Movement()
@@ -117,29 +117,31 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void WrapSnake()
+    private void WrapSnakeBody()
     {
-        Vector3 headPosition = _snakeBodyTransformList[0].position;
+        Vector3 snakeHeadPosition = _snakeBodyTransformList[0].position;
 
-        if (headPosition.x > _screenWidth)
+        //checking at x-axis
+        if (snakeHeadPosition.x > _screenWidth)
         {
-            headPosition.x = -_screenWidth;
+            snakeHeadPosition.x = -_screenWidth;
         }
-        else if (headPosition.x < -_screenWidth)
+        else if (snakeHeadPosition.x < -_screenWidth)
         {
-            headPosition.x = _screenWidth;
-        }
-
-        if (headPosition.y > _screenHeight)
-        {
-            headPosition.y = -_screenHeight;
-        }
-        else if (headPosition.y < -_screenHeight)
-        {
-            headPosition.y = _screenHeight;
+            snakeHeadPosition.x = _screenWidth;
         }
 
-        _snakeBodyTransformList[0].position = headPosition;
+        //checking at y-axis
+        if (snakeHeadPosition.y > _screenHeight)
+        {
+            snakeHeadPosition.y = -_screenHeight;
+        }
+        else if (snakeHeadPosition.y < -_screenHeight)
+        {
+            snakeHeadPosition.y = _screenHeight;
+        }
+
+        _snakeBodyTransformList[0].position = snakeHeadPosition;
     }
 
     public void CreateSnakeBody()
