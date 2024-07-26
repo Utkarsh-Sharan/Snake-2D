@@ -35,17 +35,6 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
         WrapSnakeBody();
-        if (Input.GetMouseButtonDown(0))    //only for testing
-        {
-            _snakeBodySize++;
-            CreateSnakeBody();
-        }
-        if(Input.GetMouseButtonDown(1))     //only for testing
-        {
-            _snakeBodySize--;
-            DestroySnakeBody();
-        }
-        
     }
 
     private void FixedUpdate()
@@ -146,6 +135,8 @@ public class PlayerController : MonoBehaviour
 
     public void CreateSnakeBody()
     {
+        _snakeBodySize++;
+
         //instantiating and storing the body
         Transform snakeBody = Instantiate(this._snakeBody);
 
@@ -160,6 +151,8 @@ public class PlayerController : MonoBehaviour
     {
         if (_snakeBodyTransformList.Count > 1) // There must be at least one body part to remove
         {
+            _snakeBodySize--;
+
             // Getting the last body part
             Transform lastBodyPart = _snakeBodyTransformList[_snakeBodyTransformList.Count - 1];
 
