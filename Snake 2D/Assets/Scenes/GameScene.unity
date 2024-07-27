@@ -563,6 +563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _snakeBody: {fileID: 963008492839025338, guid: 1dc87a0b9be5205438148ae2dde1132a, type: 3}
+  _snakeBodyCollider: {fileID: 2496403059866413957, guid: 1dc87a0b9be5205438148ae2dde1132a, type: 3}
   _camera: {fileID: 519420031}
 --- !u!61 &745171024
 BoxCollider2D:

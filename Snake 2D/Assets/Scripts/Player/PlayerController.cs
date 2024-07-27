@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private float _screenWidth;
     private float _screenHeight;
+    private float _boundaryCheckOffset = 1f;
 
     private List<Transform> _snakeBodyTransformList;
 
@@ -131,6 +132,26 @@ public class PlayerController : MonoBehaviour
         }
 
         _snakeBodyTransformList[0].position = snakeHeadPosition;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (IsWithinBoundaryExclusionZone(transform.position))
+        {
+            return; // Skip collision check
+        }
+        else if (other.gameObject.GetComponent<SnakeBodyPart>())
+        {
+            Time.timeScale = 0f;
+            Debug.Log("Player Dead");
+        }
+    }
+
+    private bool IsWithinBoundaryExclusionZone(Vector3 position)
+    {
+        // Check if the snake head is within the exclusion zone of the leftmost or rightmost boundary
+        return position.x <= -_screenWidth + _boundaryCheckOffset ||
+               position.x >= _screenWidth - _boundaryCheckOffset;
     }
 
     public void CreateSnakeBody()
