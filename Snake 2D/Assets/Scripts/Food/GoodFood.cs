@@ -15,7 +15,7 @@ public class GoodFood : FoodController
     {
         while (true)
         {
-            yield return new WaitForSeconds(_spawnInterval);
+            yield return new WaitForSeconds(spawnInterval);
             RandomizeFoodPosition();
         }
     }
@@ -26,6 +26,7 @@ public class GoodFood : FoodController
         {
             RandomizeFoodPosition();
             playerController.CreateSnakeBody();
+            scoreController.PlayerScoreController(+5);
         }
     }
 }

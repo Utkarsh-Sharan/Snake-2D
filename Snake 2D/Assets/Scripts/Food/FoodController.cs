@@ -6,8 +6,9 @@ public class FoodController : MonoBehaviour
 {
     [SerializeField] protected BoxCollider2D foodSpawnArea;
     [SerializeField] protected PlayerController playerController;
+    [SerializeField] protected ScoreController scoreController;
 
-    protected float _spawnInterval = 3f;
+    protected float spawnInterval = 3f;
 
     protected void RandomizeFoodPosition()
     {
