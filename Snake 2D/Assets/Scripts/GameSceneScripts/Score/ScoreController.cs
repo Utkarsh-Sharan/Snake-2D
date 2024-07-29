@@ -7,6 +7,7 @@ public class ScoreController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _currentPlayerName;
     [SerializeField] private TextMeshProUGUI _playerScoreText;
+    [SerializeField] private GameObject _gameOverUIPanel;
 
     private int _playerScore = 0;
 
@@ -20,10 +21,10 @@ public class ScoreController : MonoBehaviour
     {
         _playerScore += score;
 
-        if(_playerScore <= 0)
+        if(_playerScore < 0)
         {
-            _playerScore = 0;                           //so that score can't go negative
-            GameManager.Instance.GameOverHandler();     //end the game 
+            _playerScore = 0;                                           //so that score can't go negative
+            GameManager.Instance.GameOverHandler(_gameOverUIPanel);     //end the game 
         }
 
         ScoreManager.Instance.currentPlayerScore = _playerScore;

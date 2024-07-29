@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,13 +25,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GameOverHandler()
+    public void GameOverHandler(GameObject gameOverUIPanel)
     {
         switch (_gameType)
         {
             case GameType.SINGLE_PLAYER:
                 CheckForBestSinglePlayer();
-                Time.timeScale = 0;
+                ScoreManager.Instance.LoadBestPlayerData();
+                gameOverUIPanel.SetActive(true);
+                Time.timeScale = 0f;
                 break;
 
             //case GameType.CO_OP:      //will define later
