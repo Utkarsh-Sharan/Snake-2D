@@ -50,6 +50,7 @@ public class ScoreManager : MonoBehaviour   //will handle player data (name and 
     public void LoadBestPlayerData()
     {
         string path = Application.persistentDataPath + "/saveFile.json";
+        Debug.Log(path);
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
