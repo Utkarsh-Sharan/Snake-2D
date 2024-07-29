@@ -142,8 +142,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.gameObject.GetComponent<SnakeBodyPart>())
         {
-            Time.timeScale = 0f;
-            Debug.Log("Player Dead");
+            GameManager.Instance.GameOverHandler();
         }
     }
 
