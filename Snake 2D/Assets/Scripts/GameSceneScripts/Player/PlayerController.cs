@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Transform _snakeBody;
     [SerializeField] private Camera _camera;
+    [SerializeField] private GameObject _gameOverUIPanel;
 
     private int _snakeBodySize;
 
@@ -142,8 +143,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.gameObject.GetComponent<SnakeBodyPart>())
         {
-            Time.timeScale = 0f;
-            Debug.Log("Player Dead");
+            GameManager.Instance.GameOverHandler(_gameOverUIPanel);
         }
     }
 
