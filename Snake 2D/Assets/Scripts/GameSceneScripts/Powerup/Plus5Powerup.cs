@@ -26,4 +26,14 @@ public class Plus5Powerup : PowerupController
         // Update the power-up's position
         transform.position = new Vector3(transform.position.x, _initialYPosition + yPosition, transform.position.z);
     }
+
+    protected override void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.GetComponent<PlayerController>())
+        {
+            Destroy(this.GetComponent<Collider2D>());
+
+            StartCoroutine(PlayerPowerupController.Plus5PowerupCooldownRoutine());
+        }
+    }
 }

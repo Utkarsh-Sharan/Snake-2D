@@ -26,4 +26,9 @@ public class SpeedBoostPowerup : PowerupController
         // Update the power-up's position
         transform.position = new Vector3(transform.position.x, _initialYPosition + yPosition, transform.position.z);
     }
+
+    protected override void OnTriggerEnter2D(Collider2D other)
+    {
+
+    }
 }

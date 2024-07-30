@@ -26,7 +26,15 @@ public class GoodFood : FoodController
         {
             RandomizeFoodPosition();
             playerController.CreateSnakeBody();
-            scoreController.PlayerScoreController(+5);
+
+            if(PlayerPowerupController.Plus5PowerupStatus == true)
+            {
+                scoreController.PlayerScoreController(+10);
+            }
+            else
+            {
+                scoreController.PlayerScoreController(+5);
+            }
         }
     }
 }

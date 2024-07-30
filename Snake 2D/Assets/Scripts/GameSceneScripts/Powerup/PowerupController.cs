@@ -6,7 +6,7 @@ using UnityEngine;
 public class PowerupController : MonoBehaviour
 {
     [SerializeField] private GameObject[] _powerupObjects = new GameObject[3];
-    [SerializeField] private BoxCollider2D powerupSpawnArea;
+    [SerializeField] private BoxCollider2D _powerupSpawnArea;
 
     private void Start()
     {
@@ -29,7 +29,7 @@ public class PowerupController : MonoBehaviour
 
     private Vector3 RandomizePowerupPosition()
     {
-        Bounds bounds = powerupSpawnArea.bounds;
+        Bounds bounds = _powerupSpawnArea.bounds;
 
         float boundX = Random.Range(bounds.min.x, bounds.max.x);
         float boundY = Random.Range(bounds.min.y, bounds.max.y);
@@ -38,4 +38,9 @@ public class PowerupController : MonoBehaviour
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other) { }
+
+    //protected virtual IEnumerator PowerupCooldownRoutine()
+    //{
+    //    yield return new WaitForSeconds(5f);
+    //}
 }
