@@ -6,14 +6,9 @@ using UnityEngine;
 public class PowerupController : MonoBehaviour
 {
     [SerializeField] private GameObject[] _powerupObjects = new GameObject[3];
+    [SerializeField] private BoxCollider2D powerupSpawnArea;
 
-    private float minimumYPos = 0.1f;
-    private float maximumYPos = 0.3f;
-    private float yPosition;
-    private float bounceSpeed = 3;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         StartCoroutine(PowerupSpawnRoutine());
     }
@@ -25,21 +20,22 @@ public class PowerupController : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(3f, 6f));
 
             int i = Random.Range(0, _powerupObjects.Length);
-            GameObject powerupInstance = Instantiate(_powerupObjects[i]);
-            Destroy(powerupInstance, 3.0f);
+            Vector3 randomSpawnPosition = RandomizePowerupPosition();
+
+            GameObject powerupInstance = Instantiate(_powerupObjects[i], randomSpawnPosition, Quaternion.identity);   //direct destruction of game objects is not allowed in unity
+            Destroy(powerupInstance, 3.0f);                                                                           //so, destroying its instance
         } 
     }
 
-    // Update is called once per frame
-    protected void Update()
+    private Vector3 RandomizePowerupPosition()
     {
-        // Calculate the sine value based on time and bounceSpeed
-        float sinValue = Mathf.Sin(Time.time * bounceSpeed);
+        Bounds bounds = powerupSpawnArea.bounds;
 
-        // Interpolate between maximum and minimum Y positions
-        yPosition = Mathf.Lerp(maximumYPos, minimumYPos, Mathf.Abs(sinValue));
+        float boundX = Random.Range(bounds.min.x, bounds.max.x);
+        float boundY = Random.Range(bounds.min.y, bounds.max.y);
 
-        // Update the power-up's position
-        transform.position = new Vector3(transform.position.x, yPosition, transform.position.z);
+        return new Vector3(Mathf.Round(boundX), Mathf.Round(boundY), 0f);
     }
+
+    protected virtual void OnTriggerEnter2D(Collider2D other) { }
 }
