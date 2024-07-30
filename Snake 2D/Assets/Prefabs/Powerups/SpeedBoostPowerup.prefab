@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 793483493419595875}
   - component: {fileID: 8327981450148891656}
   - component: {fileID: 8291881456971623009}
+  - component: {fileID: -8025685152826395894}
   m_Layer: 0
   m_Name: SpeedBoostPowerup
   m_TagString: Untagged
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1372614, y: 1.9092832}
   m_EdgeRadius: 0
+--- !u!114 &-8025685152826395894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8786891348190461549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ab427953931b41a8e56742cf72680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

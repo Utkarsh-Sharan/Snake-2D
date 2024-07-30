@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2835181153008938907}
   - component: {fileID: 6642849067177699098}
   - component: {fileID: 7071768952841979277}
+  - component: {fileID: 6445812748829252920}
   m_Layer: 0
   m_Name: Plus5Powerup
   m_TagString: Untagged
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.30511, y: 0.6876576}
   m_EdgeRadius: 0
+--- !u!114 &6445812748829252920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057519339527490584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a776373e5e9b85742a22432cfeef713c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
