@@ -1236,6 +1236,7 @@ MonoBehaviour:
   - {fileID: 1010282326016671727, guid: 45bb389a76f26354a84da0a26dba7e82, type: 3}
   - {fileID: 8786891348190461549, guid: f3aaa05e5e209f64a9d77b58d25a156d, type: 3}
   _powerupSpawnArea: {fileID: 1782509424}
+  playerPowerupController: {fileID: 745171025}
 --- !u!4 &1179199423
 Transform:
   m_ObjectHideFlags: 0

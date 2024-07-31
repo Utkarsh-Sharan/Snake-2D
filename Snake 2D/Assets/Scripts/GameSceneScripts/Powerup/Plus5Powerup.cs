@@ -31,9 +31,9 @@ public class Plus5Powerup : PowerupController
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            Destroy(this.GetComponent<Collider2D>());
-
-            StartCoroutine(PlayerPowerupController.Plus5PowerupCooldownRoutine());
+            PlayerPowerupController playerPowerupController = other.gameObject.GetComponent<PlayerPowerupController>();
+            playerPowerupController.ActivatePlus5Powerup();
+            Destroy(this.gameObject);
         }
     }
 }

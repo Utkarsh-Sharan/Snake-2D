@@ -13,10 +13,16 @@ public class PlayerPowerupController : MonoBehaviour
     private static bool _speedBoostPowerupStatus;
     public static bool SpeedBoostPowerupStatus { get { return _speedBoostPowerupStatus; } set { _speedBoostPowerupStatus = value; } }
 
-    public static IEnumerator Plus5PowerupCooldownRoutine()
+    public void ActivatePlus5Powerup()
     {
         _plus5PowerupStatus = true;
+        StartCoroutine(Plus5PowerupCooldownRoutine());
+    }
+
+    private IEnumerator Plus5PowerupCooldownRoutine()
+    {
         yield return new WaitForSeconds(5f);
+
         _plus5PowerupStatus = false;
     }
 }

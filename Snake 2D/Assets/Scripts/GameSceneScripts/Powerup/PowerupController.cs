@@ -7,6 +7,7 @@ public class PowerupController : MonoBehaviour
 {
     [SerializeField] private GameObject[] _powerupObjects = new GameObject[3];
     [SerializeField] private BoxCollider2D _powerupSpawnArea;
+    //[SerializeField] protected PlayerPowerupController playerPowerupController;
 
     private void Start()
     {
@@ -38,9 +39,4 @@ public class PowerupController : MonoBehaviour
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other) { }
-
-    //protected virtual IEnumerator PowerupCooldownRoutine()
-    //{
-    //    yield return new WaitForSeconds(5f);
-    //}
 }
