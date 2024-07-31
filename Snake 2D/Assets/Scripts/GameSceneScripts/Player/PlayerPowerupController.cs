@@ -10,9 +10,6 @@ public class PlayerPowerupController : MonoBehaviour
     private static bool _shieldPowerupStatus;
     public static bool ShieldPowerupStatus { get { return _shieldPowerupStatus; } }
 
-    private static bool _magnetPowerupStatus;
-    public static bool MagnetPowerupStatus { get { return _magnetPowerupStatus; } }
-
     public void ActivatePowerup(PowerupType powerupType)
     {
         switch (powerupType)
@@ -25,12 +22,6 @@ public class PlayerPowerupController : MonoBehaviour
             case PowerupType.SHIELD:
                 _shieldPowerupStatus = true;
                 StartCoroutine(ShieldPowerupCooldownRoutine());
-                break;
-
-            case PowerupType.MAGNET:
-                _magnetPowerupStatus = true;
-                PlayerController player = GetComponent<PlayerController>();
-                StartCoroutine(MagnetPowerupCooldownRoutine(player));
                 break;
         }
     }
@@ -48,35 +39,10 @@ public class PlayerPowerupController : MonoBehaviour
 
         _shieldPowerupStatus = false;
     }
-
-    private IEnumerator MagnetPowerupCooldownRoutine(PlayerController player)
-    {
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(player.transform.position, 5f);
-        foreach (Collider2D hitCollider in hitColliders)
-        {
-            if (hitCollider.GetComponent<GoodFood>())
-            {
-                GoodFood.IsAttracted = true;
-            }
-        }
-
-        yield return new WaitForSeconds(5f);
-
-        foreach (Collider2D hitCollider in hitColliders)
-        {
-            if (hitCollider.GetComponent<GoodFood>())
-            {
-                GoodFood.IsAttracted = false;
-            }
-        }
-
-        _magnetPowerupStatus = false;
-    }
 }
 
 public enum PowerupType
 {
     PLUS_5,
     SHIELD,
-    MAGNET
 }

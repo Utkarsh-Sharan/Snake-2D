@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PowerupController : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _powerupObjects = new GameObject[3];
+    [SerializeField] private GameObject[] _powerupObjects = new GameObject[2];
     [SerializeField] private BoxCollider2D _powerupSpawnArea;
 
     private void Start()
