@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject _gameOverUIPanel;
 
     private int _snakeBodySize;
-
+    private float _snakeSpeed = 10f;
     private Vector2 _snakeMove;
     private MovementDirection _movementDirection;
 
@@ -46,12 +46,17 @@ public class PlayerController : MonoBehaviour
         {
             _snakeBodyTransformList[i].position = _snakeBodyTransformList[i - 1].position;
         }
-        
+
         //rigidbody movement
         this.transform.position = new Vector3(
                                          Mathf.Round(this.transform.position.x + _snakeMove.x),
                                          Mathf.Round(this.transform.position.y + _snakeMove.y),
                                          0f);
+
+        // Move the snake
+        //Vector3 movement = new Vector3(_snakeMove.x, _snakeMove.y, 0f) * _snakeSpeed * Time.fixedDeltaTime;
+        //this.transform.position += movement;
+
         //wrapping snake's body
         WrapSnakeBody();
     }
@@ -137,7 +142,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (IsWithinBoundaryExclusionZone(transform.position))
+        if (IsWithinBoundaryExclusionZone(transform.position) || PlayerPowerupController.ShieldPowerupStatus == true)
         {
             return; // Skip collision check
         }

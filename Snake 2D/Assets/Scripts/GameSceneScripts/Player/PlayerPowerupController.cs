@@ -45,14 +45,14 @@ public class PlayerPowerupController : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
 
-        _plus5PowerupStatus = false;
+        _shieldPowerupStatus = false;
     }
 
     private IEnumerator SpeedBoostPowerupCooldownRoutine()
     {
         yield return new WaitForSeconds(5f);
 
-        _plus5PowerupStatus = false;
+        _speedBoostPowerupStatus = false;
     }
 }
 

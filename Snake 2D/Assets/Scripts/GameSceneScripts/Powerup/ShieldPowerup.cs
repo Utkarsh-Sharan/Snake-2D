@@ -29,6 +29,11 @@ public class ShieldPowerup : PowerupController
 
     protected override void OnTriggerEnter2D(Collider2D other)
     {
-
+        if (other.gameObject.GetComponent<PlayerController>())
+        {
+            PlayerPowerupController playerPowerupController = other.gameObject.GetComponent<PlayerPowerupController>();
+            playerPowerupController.ActivatePowerup(PowerupType.SHIELD);
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -7,7 +7,6 @@ public class PowerupController : MonoBehaviour
 {
     [SerializeField] private GameObject[] _powerupObjects = new GameObject[3];
     [SerializeField] private BoxCollider2D _powerupSpawnArea;
-    //[SerializeField] protected PlayerPowerupController playerPowerupController;
 
     private void Start()
     {
