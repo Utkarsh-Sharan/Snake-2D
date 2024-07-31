@@ -8,15 +8,30 @@ public class PlayerPowerupController : MonoBehaviour
     public static bool Plus5PowerupStatus { get { return _plus5PowerupStatus; } }
 
     private static bool _shieldPowerupStatus;
-    public static bool ShieldPowerupStatus { get { return _shieldPowerupStatus; } set { _shieldPowerupStatus = value; } }
+    public static bool ShieldPowerupStatus { get { return _shieldPowerupStatus; } }
 
     private static bool _speedBoostPowerupStatus;
-    public static bool SpeedBoostPowerupStatus { get { return _speedBoostPowerupStatus; } set { _speedBoostPowerupStatus = value; } }
+    public static bool SpeedBoostPowerupStatus { get { return _speedBoostPowerupStatus; } }
 
-    public void ActivatePlus5Powerup()
+    public void ActivatePowerup(PowerupType powerupType)
     {
-        _plus5PowerupStatus = true;
-        StartCoroutine(Plus5PowerupCooldownRoutine());
+        switch (powerupType)
+        {
+            case PowerupType.PLUS_5:
+                _plus5PowerupStatus = true;
+                StartCoroutine(Plus5PowerupCooldownRoutine());
+                break;
+
+            case PowerupType.SHIELD:
+                _shieldPowerupStatus = true;
+                StartCoroutine(ShieldPowerupCooldownRoutine());
+                break;
+
+            case PowerupType.SPEED_BOOST:
+                _speedBoostPowerupStatus = true;
+                StartCoroutine(SpeedBoostPowerupCooldownRoutine());
+                break;
+        }
     }
 
     private IEnumerator Plus5PowerupCooldownRoutine()
@@ -25,4 +40,25 @@ public class PlayerPowerupController : MonoBehaviour
 
         _plus5PowerupStatus = false;
     }
+
+    private IEnumerator ShieldPowerupCooldownRoutine()
+    {
+        yield return new WaitForSeconds(5f);
+
+        _plus5PowerupStatus = false;
+    }
+
+    private IEnumerator SpeedBoostPowerupCooldownRoutine()
+    {
+        yield return new WaitForSeconds(5f);
+
+        _plus5PowerupStatus = false;
+    }
+}
+
+public enum PowerupType
+{
+    PLUS_5,
+    SHIELD,
+    SPEED_BOOST
 }

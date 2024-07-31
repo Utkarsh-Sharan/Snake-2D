@@ -32,7 +32,7 @@ public class Plus5Powerup : PowerupController
         if (other.gameObject.GetComponent<PlayerController>())
         {
             PlayerPowerupController playerPowerupController = other.gameObject.GetComponent<PlayerPowerupController>();
-            playerPowerupController.ActivatePlus5Powerup();
+            playerPowerupController.ActivatePowerup(PowerupType.PLUS_5);
             Destroy(this.gameObject);
         }
     }
