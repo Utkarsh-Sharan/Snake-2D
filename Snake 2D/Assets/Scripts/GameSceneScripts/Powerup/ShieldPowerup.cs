@@ -26,4 +26,14 @@ public class ShieldPowerup : PowerupController
         // Update the power-up's position
         transform.position = new Vector3(transform.position.x, _initialYPosition + yPosition, transform.position.z);
     }
+
+    protected override void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.GetComponent<PlayerController>())
+        {
+            PlayerPowerupController playerPowerupController = other.gameObject.GetComponent<PlayerPowerupController>();
+            playerPowerupController.ActivatePowerup(PowerupType.SHIELD);
+            Destroy(this.gameObject);
+        }
+    }
 }
