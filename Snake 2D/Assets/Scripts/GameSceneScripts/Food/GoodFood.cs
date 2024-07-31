@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GoodFood : FoodController
 {
+    private static bool _isAttracted = false;
+    public static bool IsAttracted { get { return _isAttracted; } set { _isAttracted = value; } }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +19,10 @@ public class GoodFood : FoodController
         while (true)
         {
             yield return new WaitForSeconds(spawnInterval);
-            RandomizeFoodPosition();
+            if (!_isAttracted)
+            {
+                RandomizeFoodPosition();
+            }
         }
     }
 

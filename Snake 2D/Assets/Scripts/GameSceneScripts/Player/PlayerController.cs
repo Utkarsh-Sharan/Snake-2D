@@ -36,7 +36,11 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Movement();
-        WrapSnakeBody();
+        WrapSnakeHead();
+        if (PlayerPowerupController.MagnetPowerupStatus == true)
+        {
+            AttractNearbyGoodFood();
+        }
     }
 
     private void FixedUpdate()
@@ -53,12 +57,8 @@ public class PlayerController : MonoBehaviour
                                          Mathf.Round(this.transform.position.y + _snakeMove.y),
                                          0f);
 
-        // Move the snake
-        //Vector3 movement = new Vector3(_snakeMove.x, _snakeMove.y, 0f) * _snakeSpeed * Time.fixedDeltaTime;
-        //this.transform.position += movement;
-
         //wrapping snake's body
-        WrapSnakeBody();
+        WrapSnakeHead();
     }
 
     private void Movement()
@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void WrapSnakeBody()
+    private void WrapSnakeHead()
     {
         Vector3 snakeHeadPosition = _snakeBodyTransformList[0].position;
 
@@ -138,6 +138,33 @@ public class PlayerController : MonoBehaviour
         }
 
         _snakeBodyTransformList[0].position = snakeHeadPosition;
+    }
+
+    private void AttractNearbyGoodFood()
+    {
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, 5f); // Use the attractRange from MagnetPowerUp
+        foreach (var hitCollider in hitColliders)
+        {
+            if (hitCollider.GetComponent<GoodFood>())
+            {
+                StartCoroutine(AttractFood(hitCollider.transform));
+            }
+        }
+    }
+
+    private IEnumerator AttractFood(Transform foodTransform)
+    {
+        float elapsedTime = 0f;
+        Vector3 startPosition = foodTransform.position;
+        Vector3 targetPosition = transform.position;
+
+        while (elapsedTime < 0.2f) // Adjust duration for attraction
+        {
+            foodTransform.position = Vector3.Lerp(startPosition, targetPosition, (elapsedTime / 1f));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        foodTransform.position = targetPosition; // Ensure the food ends up at the target position
     }
 
     private void OnCollisionEnter2D(Collision2D other)
