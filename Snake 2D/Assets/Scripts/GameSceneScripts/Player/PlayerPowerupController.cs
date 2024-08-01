@@ -30,6 +30,7 @@ public class PlayerPowerupController : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
 
+        SoundManager.Instance.Play(Sounds.POWERUP_EFFECT_END);
         _plus5PowerupStatus = false;
     }
 
@@ -37,6 +38,7 @@ public class PlayerPowerupController : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
 
+        SoundManager.Instance.Play(Sounds.POWERUP_EFFECT_END);
         _shieldPowerupStatus = false;
     }
 }

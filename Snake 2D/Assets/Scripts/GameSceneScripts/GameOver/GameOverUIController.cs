@@ -23,12 +23,16 @@ public class GameOverUIController : MonoBehaviour
 
     private void MainMenuButton()
     {
+        SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
+
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(0);
     }
 
     private void QuitToDesktopButton()
     {
+        SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
+
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
 #else

@@ -31,8 +31,11 @@ public class ShieldPowerup : PowerupController
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
+            SoundManager.Instance.Play(Sounds.POWERUP_EFFECT_START);
+
             PlayerPowerupController playerPowerupController = other.gameObject.GetComponent<PlayerPowerupController>();
             playerPowerupController.ActivatePowerup(PowerupType.SHIELD);
+
             Destroy(this.gameObject);
         }
     }

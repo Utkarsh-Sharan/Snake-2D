@@ -24,6 +24,8 @@ public class BadFood : FoodController
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
+            SoundManager.Instance.Play(Sounds.PLAYER_ATE_FOOD);
+
             RandomizeFoodPosition();
             playerController.DestroySnakeBody();
             scoreController.PlayerScoreController(-5);
