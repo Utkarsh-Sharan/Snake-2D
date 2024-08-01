@@ -13,7 +13,7 @@ public class ScoreController : MonoBehaviour
 
     private void Start()
     {
-        _currentPlayerName.text = $"Player : {ScoreManager.Instance.currentPlayerName}";
+        _currentPlayerName.text = $"Player : {ScoreManager.Instance.currentSinglePlayerName}";
         _playerScoreText.text = "Score: " + _playerScore;
     }
 
@@ -27,7 +27,7 @@ public class ScoreController : MonoBehaviour
             GameManager.Instance.GameOverHandler(_gameOverUIPanel);     //end the game 
         }
 
-        ScoreManager.Instance.currentPlayerScore = _playerScore;
+        ScoreManager.Instance.currentSinglePlayerScore = _playerScore;
         _playerScoreText.text = "Score: " + _playerScore;
     }
 }

@@ -8,14 +8,24 @@ using UnityEditor;
 
 public class MenuUIController : MonoBehaviour
 {
+    //ui holders
     [SerializeField] private GameObject _menuUIHolder;
     [SerializeField] private GameObject _singlePlayerUIHolder;
     [SerializeField] private GameObject _coOpUIHolder;
     [SerializeField] private GameObject _highScoreUIHolder;
 
-    [SerializeField] private TextMeshProUGUI _currentPlayerName;
+    //holding data for single player
+    [SerializeField] private TextMeshProUGUI _currentSinglePlayerName;
     [SerializeField] private TextMeshProUGUI _bestPlayerName;
     [SerializeField] private TextMeshProUGUI _bestPlayerScore;
+
+    //holding data for co-op players
+    [SerializeField] private TextMeshProUGUI _currentPlayer1Name;
+    [SerializeField] private TextMeshProUGUI _currentPlayer2Name;
+    [SerializeField] private TextMeshProUGUI _player1Name;
+    [SerializeField] private TextMeshProUGUI _player1Score;
+    [SerializeField] private TextMeshProUGUI _player2Name;
+    [SerializeField] private TextMeshProUGUI _player2Score;
 
     [SerializeField] private Button _singlePlayerButton;
     [SerializeField] private Button _coOpButton;
@@ -63,9 +73,14 @@ public class MenuUIController : MonoBehaviour
     {
         SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
 
-        ScoreManager.Instance.LoadBestPlayerData();
+        ScoreManager.Instance.LoadPlayerData();
         _bestPlayerName.text = $"Best Player: {ScoreManager.Instance.bestPlayerName}";
         _bestPlayerScore.text = $"Score: {ScoreManager.Instance.bestPlayerScore}";
+
+        _player1Name.text = $"Player 1:   {ScoreManager.Instance.player1Name}";
+        _player1Score.text = $"Score:   {ScoreManager.Instance.player1Score}";
+        _player2Name.text = $"Player 2:   {ScoreManager.Instance.player2Name}";
+        _player2Score.text = $"Score:   {ScoreManager.Instance.player2Score}";
 
         _menuUIHolder.SetActive(false);
         _highScoreUIHolder.SetActive(true);
@@ -83,7 +98,7 @@ public class MenuUIController : MonoBehaviour
     {
         SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
 
-        ScoreManager.Instance.currentPlayerName = _currentPlayerName.text;
+        ScoreManager.Instance.currentSinglePlayerName = _currentSinglePlayerName.text;
         SceneManager.LoadScene(1);
     }
 
@@ -91,7 +106,8 @@ public class MenuUIController : MonoBehaviour
     {
         SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
 
-        ScoreManager.Instance.currentPlayerName = _currentPlayerName.text;
+        ScoreManager.Instance.currentPlayer1Name = _currentPlayer1Name.text;
+        ScoreManager.Instance.currentPlayer2Name = _currentPlayer2Name.text;
         SceneManager.LoadScene(2);
     }
 

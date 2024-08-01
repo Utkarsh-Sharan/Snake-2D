@@ -31,25 +31,40 @@ public class GameManager : MonoBehaviour
         {
             case GameType.SINGLE_PLAYER:
                 CheckForBestSinglePlayer();
-                ScoreManager.Instance.LoadBestPlayerData();
+                ScoreManager.Instance.LoadPlayerData();
                 gameOverUIPanel.SetActive(true);
                 Time.timeScale = 0f;
                 break;
 
-            //case GameType.CO_OP:      //will define later
+            case GameType.CO_OP:
+                SaveCoOpPlayers();
+                gameOverUIPanel.SetActive(true);
+                Time.timeScale = 0f;
+                break;
         }
     }
 
     private void CheckForBestSinglePlayer()
     {
-        int score = ScoreManager.Instance.currentPlayerScore;
+        int score = ScoreManager.Instance.currentSinglePlayerScore;
         if (score > ScoreManager.Instance.bestPlayerScore)
         {
             ScoreManager.Instance.bestPlayerScore = score;
-            ScoreManager.Instance.bestPlayerName = ScoreManager.Instance.currentPlayerName;
+            ScoreManager.Instance.bestPlayerName = ScoreManager.Instance.currentSinglePlayerName;
 
             ScoreManager.Instance.SaveBestPlayerData(ScoreManager.Instance.bestPlayerName, score);
         }
+    }
+
+    private void SaveCoOpPlayers()
+    {
+        string player1Name = ScoreManager.Instance.currentPlayer1Name;
+        int player1Score = ScoreManager.Instance.currentPlayer1Score;
+
+        string player2Name = ScoreManager.Instance.currentPlayer2Name;
+        int player2Score = ScoreManager.Instance.currentPlayer2Score;
+
+        ScoreManager.Instance.SaveCoOpPlayersData(player1Name, player1Score, player2Name, player2Score);
     }
 }
 

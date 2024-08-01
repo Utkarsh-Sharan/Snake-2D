@@ -8,13 +8,26 @@ public class ScoreManager : MonoBehaviour   //will handle player data (name and 
     private static ScoreManager _instance;
     public static ScoreManager Instance { get { return _instance; } }
 
-    //current player data
-    [HideInInspector] public string currentPlayerName;
-    [HideInInspector] public int currentPlayerScore;
+    //current single player data
+    [HideInInspector] public string currentSinglePlayerName;
+    [HideInInspector] public int currentSinglePlayerScore;
 
-    //best player data
+    //current co-op players data
+    [HideInInspector] public string currentPlayer1Name;
+    [HideInInspector] public int currentPlayer1Score;
+    [HideInInspector] public string currentPlayer2Name;
+    [HideInInspector] public int currentPlayer2Score;
+
+    //best single player data
     [HideInInspector] public string bestPlayerName;
     [HideInInspector] public int bestPlayerScore;
+
+    //co-op players data
+    [HideInInspector] public string player1Name;
+    [HideInInspector] public int player1Score;
+
+    [HideInInspector] public string player2Name;
+    [HideInInspector] public int player2Score;
 
     private void Awake()
     {
@@ -30,16 +43,26 @@ public class ScoreManager : MonoBehaviour   //will handle player data (name and 
     }
 
     [System.Serializable]
-    public class SaveData
+    public class SaveBestSinglePlayerData
     {
         public string bestPlayerName;
         public int bestPlayerScore;
     }
 
+    [System.Serializable]
+    public class SaveCoOpPlayerData
+    {
+        public string player1Name;
+        public int player1Score;
+
+        public string player2Name;
+        public int player2Score;
+    }
+
     /*************** Using JSON for saving and loading player data ***************/
     public void SaveBestPlayerData(string bestPlayerName, int bestPlayerScore)
     {
-        SaveData data = new SaveData();
+        SaveBestSinglePlayerData data = new SaveBestSinglePlayerData();
         data.bestPlayerName = bestPlayerName;
         data.bestPlayerScore = bestPlayerScore;
 
@@ -47,16 +70,37 @@ public class ScoreManager : MonoBehaviour   //will handle player data (name and 
         File.WriteAllText(Application.persistentDataPath + "/saveFile.json", json);
     }
 
-    public void LoadBestPlayerData()
+    public void SaveCoOpPlayersData(string player1Name, int player1Score, string player2Name, int player2Score)
+    {
+        SaveCoOpPlayerData data = new SaveCoOpPlayerData();
+        data.player1Name = player1Name;
+        data.player1Score = player1Score;
+
+        data.player2Name = player2Name;
+        data.player2Score = player2Score;
+
+        string json = JsonUtility.ToJson(data);
+        File.WriteAllText(Application.persistentDataPath + "/saveFile.json", json);
+    }
+
+    public void LoadPlayerData()
     {
         string path = Application.persistentDataPath + "/saveFile.json";
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
-            SaveData data = JsonUtility.FromJson<SaveData>(json);
 
-            bestPlayerName = data.bestPlayerName;
-            bestPlayerScore = data.bestPlayerScore;
+            //getting single player data from save file
+            SaveBestSinglePlayerData data1 = JsonUtility.FromJson<SaveBestSinglePlayerData>(json);
+            bestPlayerName = data1.bestPlayerName;
+            bestPlayerScore = data1.bestPlayerScore;
+
+            //getting co-op players data from load file
+            SaveCoOpPlayerData data2 = JsonUtility.FromJson<SaveCoOpPlayerData>(json);
+            player1Name = data2.player1Name;
+            player1Score = data2.player1Score;
+            player2Name = data2.player2Name;
+            player2Score = data2.player2Score;
         }
     }
 }
