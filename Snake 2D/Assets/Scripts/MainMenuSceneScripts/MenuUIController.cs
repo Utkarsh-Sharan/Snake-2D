@@ -10,7 +10,7 @@ public class MenuUIController : MonoBehaviour
 {
     [SerializeField] private GameObject _menuUIHolder;
     [SerializeField] private GameObject _singlePlayerUIHolder;
-    //[SerializeField] private GameObject _coOpUIHolder;
+    [SerializeField] private GameObject _coOpUIHolder;
     [SerializeField] private GameObject _highScoreUIHolder;
 
     [SerializeField] private TextMeshProUGUI _currentPlayerName;
@@ -48,8 +48,11 @@ public class MenuUIController : MonoBehaviour
 
     private void OpenCoOpPlayersNameInputField()
     {
+        GameManager.Instance.GameType = GameType.CO_OP;
         SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
-        //will add logic later
+
+        _menuUIHolder.SetActive(false);
+        _coOpUIHolder.SetActive(true);
     }
 
     private void OpenHighScore()
