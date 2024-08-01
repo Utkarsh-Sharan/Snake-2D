@@ -37,7 +37,16 @@ public class SoundManager : MonoBehaviour
         if (clip != null)
         {
             _soundBgMusic.clip = clip;
-            _soundBgMusic.Play();
+            switch (sound)
+            {
+                case Sounds.PLAYER_DEATH:
+                    _soundBgMusic.PlayOneShot(_soundBgMusic.clip);
+                    break;
+
+                case Sounds.BACKGROUND_MUSIC:
+                    _soundBgMusic.Play();
+                    break;
+            }
         }
         else
         {

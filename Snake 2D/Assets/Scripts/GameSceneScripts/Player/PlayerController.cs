@@ -143,6 +143,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.gameObject.GetComponent<SnakeBodyPart>())
         {
+            SoundManager.Instance.PlayMusic(Sounds.PLAYER_DEATH);
             GameManager.Instance.GameOverHandler(_gameOverUIPanel);
         }
     }

@@ -27,6 +27,8 @@ public class MenuUIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SoundManager.Instance.PlayMusic(Sounds.BACKGROUND_MUSIC);
+
         _singlePlayerPlayButton.onClick.AddListener(OpenSinglePlayerNameInputField);
         _coOpPlayButton.onClick.AddListener(OpenCoOpPlayersNameInputField);
         _highScoreButton.onClick.AddListener(OpenHighScore);
@@ -38,6 +40,7 @@ public class MenuUIController : MonoBehaviour
     private void OpenSinglePlayerNameInputField()
     {
         GameManager.Instance.GameType = GameType.SINGLE_PLAYER;
+        SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
 
         _menuUIHolder.SetActive(false);
         _singlePlayerUIHolder.SetActive(true);
@@ -45,11 +48,14 @@ public class MenuUIController : MonoBehaviour
 
     private void OpenCoOpPlayersNameInputField()
     {
+        SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
         //will add logic later
     }
 
     private void OpenHighScore()
     {
+        SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
+
         ScoreManager.Instance.LoadBestPlayerData();
         _bestPlayerName.text = $"Best Player: {ScoreManager.Instance.bestPlayerName}";
         _bestPlayerScore.text = $"Score: {ScoreManager.Instance.bestPlayerScore}";
@@ -60,18 +66,24 @@ public class MenuUIController : MonoBehaviour
 
     private void CloseHighScore()
     {
+        SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
+
         _highScoreUIHolder.SetActive(false);
         _menuUIHolder.SetActive(true);
     }
 
     private void OpenGameScene()
     {
+        SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
+
         ScoreManager.Instance.currentPlayerName = _currentPlayerName.text;
         SceneManager.LoadScene(1);
     }
 
     private void QuitGame()
     {
+        SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
+
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
 #else
