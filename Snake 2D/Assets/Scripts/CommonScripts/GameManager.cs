@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         {
             case GameType.SINGLE_PLAYER:
                 CheckForBestSinglePlayer();
-                ScoreManager.Instance.LoadBestPlayerData();
+                ScoreManager.Instance.LoadPlayerData();
                 gameOverUIPanel.SetActive(true);
                 Time.timeScale = 0f;
                 break;
@@ -42,11 +42,11 @@ public class GameManager : MonoBehaviour
 
     private void CheckForBestSinglePlayer()
     {
-        int score = ScoreManager.Instance.currentPlayerScore;
+        int score = ScoreManager.Instance.currentPlayer1Score;
         if (score > ScoreManager.Instance.bestPlayerScore)
         {
             ScoreManager.Instance.bestPlayerScore = score;
-            ScoreManager.Instance.bestPlayerName = ScoreManager.Instance.currentPlayerName;
+            ScoreManager.Instance.bestPlayerName = ScoreManager.Instance.currentPlayer1Name;
 
             ScoreManager.Instance.SaveBestPlayerData(ScoreManager.Instance.bestPlayerName, score);
         }

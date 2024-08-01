@@ -63,7 +63,7 @@ public class MenuUIController : MonoBehaviour
     {
         SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
 
-        ScoreManager.Instance.LoadBestPlayerData();
+        ScoreManager.Instance.LoadPlayerData();
         _bestPlayerName.text = $"Best Player: {ScoreManager.Instance.bestPlayerName}";
         _bestPlayerScore.text = $"Score: {ScoreManager.Instance.bestPlayerScore}";
 
@@ -83,7 +83,7 @@ public class MenuUIController : MonoBehaviour
     {
         SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
 
-        ScoreManager.Instance.currentPlayerName = _currentPlayerName.text;
+        ScoreManager.Instance.currentPlayer1Name = _currentPlayerName.text;
         SceneManager.LoadScene(1);
     }
 
@@ -91,7 +91,7 @@ public class MenuUIController : MonoBehaviour
     {
         SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
 
-        ScoreManager.Instance.currentPlayerName = _currentPlayerName.text;
+        ScoreManager.Instance.currentPlayer1Name = _currentPlayerName.text;
         SceneManager.LoadScene(2);
     }
 
