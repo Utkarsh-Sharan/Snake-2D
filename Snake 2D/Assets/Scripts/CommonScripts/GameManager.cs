@@ -36,7 +36,11 @@ public class GameManager : MonoBehaviour
                 Time.timeScale = 0f;
                 break;
 
-            //case GameType.CO_OP:      //will define later
+            case GameType.CO_OP:
+                SaveCoOpPlayers();
+                gameOverUIPanel.SetActive(true);
+                Time.timeScale = 0f;
+                break;
         }
     }
 
@@ -50,6 +54,17 @@ public class GameManager : MonoBehaviour
 
             ScoreManager.Instance.SaveBestPlayerData(ScoreManager.Instance.bestPlayerName, score);
         }
+    }
+
+    private void SaveCoOpPlayers()
+    {
+        string player1Name = ScoreManager.Instance.currentPlayer1Name;
+        int player1Score = ScoreManager.Instance.currentPlayer1Score;
+
+        string player2Name = ScoreManager.Instance.currentPlayer2Name;
+        int player2Score = ScoreManager.Instance.currentPlayer2Score;
+
+        ScoreManager.Instance.SaveCoOpPlayersData(player1Name, player1Score, player2Name, player2Score);
     }
 }
 
