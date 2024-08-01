@@ -10,17 +10,18 @@ public class MenuUIController : MonoBehaviour
 {
     [SerializeField] private GameObject _menuUIHolder;
     [SerializeField] private GameObject _singlePlayerUIHolder;
-    //[SerializeField] private GameObject _coOpUIHolder;
+    [SerializeField] private GameObject _coOpUIHolder;
     [SerializeField] private GameObject _highScoreUIHolder;
 
     [SerializeField] private TextMeshProUGUI _currentPlayerName;
     [SerializeField] private TextMeshProUGUI _bestPlayerName;
     [SerializeField] private TextMeshProUGUI _bestPlayerScore;
 
+    [SerializeField] private Button _singlePlayerButton;
+    [SerializeField] private Button _coOpButton;
+    [SerializeField] private Button _highScoreButton;
     [SerializeField] private Button _singlePlayerPlayButton;
     [SerializeField] private Button _coOpPlayButton;
-    [SerializeField] private Button _highScoreButton;
-    [SerializeField] private Button _playButton;
     [SerializeField] private Button _backToMenuButton;
     [SerializeField] private Button _quitButton;
 
@@ -29,11 +30,14 @@ public class MenuUIController : MonoBehaviour
     {
         SoundManager.Instance.PlayMusic(Sounds.BACKGROUND_MUSIC);
 
-        _singlePlayerPlayButton.onClick.AddListener(OpenSinglePlayerNameInputField);
-        _coOpPlayButton.onClick.AddListener(OpenCoOpPlayersNameInputField);
+        _singlePlayerButton.onClick.AddListener(OpenSinglePlayerNameInputField);
+        _coOpButton.onClick.AddListener(OpenCoOpPlayersNameInputField);
         _highScoreButton.onClick.AddListener(OpenHighScore);
-        _playButton.onClick.AddListener(OpenGameScene);
         _backToMenuButton.onClick.AddListener(CloseHighScore);
+
+        _singlePlayerPlayButton.onClick.AddListener(OpenSinglePlayerGameScene);
+        _coOpPlayButton.onClick.AddListener(OpenCoOpGameScene);
+
         _quitButton.onClick.AddListener(QuitGame);
     }
 
@@ -48,8 +52,11 @@ public class MenuUIController : MonoBehaviour
 
     private void OpenCoOpPlayersNameInputField()
     {
+        GameManager.Instance.GameType = GameType.CO_OP;
         SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
-        //will add logic later
+
+        _menuUIHolder.SetActive(false);
+        _coOpUIHolder.SetActive(true);
     }
 
     private void OpenHighScore()
@@ -72,12 +79,20 @@ public class MenuUIController : MonoBehaviour
         _menuUIHolder.SetActive(true);
     }
 
-    private void OpenGameScene()
+    private void OpenSinglePlayerGameScene()
     {
         SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
 
         ScoreManager.Instance.currentPlayerName = _currentPlayerName.text;
         SceneManager.LoadScene(1);
+    }
+
+    private void OpenCoOpGameScene()
+    {
+        SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
+
+        ScoreManager.Instance.currentPlayerName = _currentPlayerName.text;
+        SceneManager.LoadScene(2);
     }
 
     private void QuitGame()
