@@ -328,10 +328,11 @@ MonoBehaviour:
   _currentPlayerName: {fileID: 549916782}
   _bestPlayerName: {fileID: 673356353}
   _bestPlayerScore: {fileID: 815952552}
-  _singlePlayerPlayButton: {fileID: 1018684178}
-  _coOpPlayButton: {fileID: 986164065}
+  _singlePlayerButton: {fileID: 1018684178}
+  _coOpButton: {fileID: 986164065}
   _highScoreButton: {fileID: 398319278}
-  _playButton: {fileID: 2101621881}
+  _singlePlayerPlayButton: {fileID: 2101621881}
+  _coOpPlayButton: {fileID: 1357224136}
   _backToMenuButton: {fileID: 1699628912}
   _quitButton: {fileID: 351240805}
 --- !u!1 &125903716
@@ -3021,7 +3022,7 @@ GameObject:
   - component: {fileID: 986164066}
   - component: {fileID: 986164065}
   m_Layer: 5
-  m_Name: CoOpPlayButton
+  m_Name: CoOpButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3180,7 +3181,7 @@ GameObject:
   - component: {fileID: 1018684179}
   - component: {fileID: 1018684178}
   m_Layer: 5
-  m_Name: SinglePlayerPlayButton
+  m_Name: SinglePlayerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
