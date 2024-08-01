@@ -42,11 +42,11 @@ public class GameManager : MonoBehaviour
 
     private void CheckForBestSinglePlayer()
     {
-        int score = ScoreManager.Instance.currentPlayer1Score;
+        int score = ScoreManager.Instance.currentSinglePlayerScore;
         if (score > ScoreManager.Instance.bestPlayerScore)
         {
             ScoreManager.Instance.bestPlayerScore = score;
-            ScoreManager.Instance.bestPlayerName = ScoreManager.Instance.currentPlayer1Name;
+            ScoreManager.Instance.bestPlayerName = ScoreManager.Instance.currentSinglePlayerName;
 
             ScoreManager.Instance.SaveBestPlayerData(ScoreManager.Instance.bestPlayerName, score);
         }

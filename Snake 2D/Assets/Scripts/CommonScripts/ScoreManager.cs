@@ -8,10 +8,13 @@ public class ScoreManager : MonoBehaviour   //will handle player data (name and 
     private static ScoreManager _instance;
     public static ScoreManager Instance { get { return _instance; } }
 
-    //current player data
+    //current single player data
+    [HideInInspector] public string currentSinglePlayerName;
+    [HideInInspector] public int currentSinglePlayerScore;
+
+    //current co-op players data
     [HideInInspector] public string currentPlayer1Name;
     [HideInInspector] public int currentPlayer1Score;
-
     [HideInInspector] public string currentPlayer2Name;
     [HideInInspector] public int currentPlayer2Score;
 
