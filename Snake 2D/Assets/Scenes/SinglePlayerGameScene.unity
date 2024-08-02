@@ -1964,8 +1964,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181a7001895e1b74db8232c77e9465f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bestPlayerName: {fileID: 1698882685}
-  _bestPlayerScore: {fileID: 884188446}
+  _bestSinglePlayerName: {fileID: 1698882685}
+  _bestSinglePlayerScore: {fileID: 884188446}
+  _player1Name: {fileID: 0}
+  _player2Name: {fileID: 0}
+  _player1Score: {fileID: 0}
+  _player2Score: {fileID: 0}
   _mainMenuButton: {fileID: 564216711}
   _quitButton: {fileID: 966443145}
 --- !u!1 &2057081543
@@ -2040,7 +2044,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2069,7 +2073,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -68.57202, w: 0}
+  m_margin: {x: 0, y: 0, z: 1.3203125, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2099,8 +2103,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -297, y: -61}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -167, y: -61}
+  m_SizeDelta: {x: 255.3315, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2100927876
 GameObject:
@@ -2197,8 +2201,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1225979134}
   - {fileID: 2057081546}
+  - {fileID: 1225979134}
   - {fileID: 2054525904}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2220,7 +2224,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentPlayer1Name: {fileID: 2057081544}
+  _currentPlayer2Name: {fileID: 0}
   _player1ScoreText: {fileID: 1225979135}
+  _player2ScoreText: {fileID: 0}
   _gameOverUIPanel: {fileID: 2054525903}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

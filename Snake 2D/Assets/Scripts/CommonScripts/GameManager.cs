@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
 
             case GameType.CO_OP:
                 SaveCoOpPlayers();
+                ScoreManager.Instance.LoadCoOpPlayersData();
                 gameOverUIPanel.SetActive(true);
                 Time.timeScale = 0f;
                 break;
