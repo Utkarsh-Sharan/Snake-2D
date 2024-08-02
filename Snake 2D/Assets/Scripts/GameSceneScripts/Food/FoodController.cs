@@ -5,7 +5,7 @@ using UnityEngine;
 public class FoodController : MonoBehaviour
 {
     [SerializeField] protected BoxCollider2D foodSpawnArea;
-    [SerializeField] protected PlayerController playerController;
+    [SerializeField] protected Player1Controller playerController;
     [SerializeField] protected ScoreController scoreController;
 
     protected float spawnInterval = 3f;

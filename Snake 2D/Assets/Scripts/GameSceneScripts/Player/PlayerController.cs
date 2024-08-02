@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private Transform _snakeBody;
-    [SerializeField] private Camera _camera;
-    [SerializeField] private GameObject _gameOverUIPanel;
+    [SerializeField] protected Transform _snakeBody;
+    [SerializeField] protected Camera _camera;
+    [SerializeField] protected GameObject _gameOverUIPanel;
 
-    private int _snakeBodySize;
-    private Vector2 _snakeMove;
-    private MovementDirection _movementDirection;
+    protected int _snakeBodySize;
+    protected Vector2 _snakeMove;
+    protected MovementDirection _movementDirection;
 
-    private float _screenWidth;
-    private float _screenHeight;
-    private float _boundaryCheckOffset = 1f;
+    protected float _screenWidth;
+    protected float _screenHeight;
+    protected float _boundaryCheckOffset = 1f;
 
-    private List<Transform> _snakeBodyTransformList;
+    protected List<Transform> _snakeBodyTransformList;
 
-    private void Start()
+    protected void Start()
     {
         transform.position = new Vector3(0f, 0f, 0f);       //snake's initial position
 
@@ -32,13 +32,13 @@ public class PlayerController : MonoBehaviour
         _screenHeight = cameraHeight / 2;
     }
 
-    private void Update()
+    protected void Update()
     {
         Movement();
         WrapSnakeHead();
     }
 
-    private void FixedUpdate()
+    protected void FixedUpdate()
     {
         //adds body parts from back
         for (int i = _snakeBodyTransformList.Count - 1; i > 0; i--)
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         WrapSnakeHead();
     }
 
-    private void Movement()
+    protected void Movement()
     {
         //handling inputs in update
         if (Input.GetKeyDown(KeyCode.W) && _movementDirection != MovementDirection.DOWN)
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
         HandleSnakeFaceDirection(_movementDirection);
     }
 
-    private void HandleSnakeFaceDirection(MovementDirection faceDirection)
+    protected void HandleSnakeFaceDirection(MovementDirection faceDirection)
     {
         switch (faceDirection)
         {
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void WrapSnakeHead()
+    protected void WrapSnakeHead()
     {
         Vector3 snakeHeadPosition = _snakeBodyTransformList[0].position;
 
@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
         _snakeBodyTransformList[0].position = snakeHeadPosition;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    protected void OnCollisionEnter2D(Collision2D other)
     {
         if (IsWithinBoundaryExclusionZone(transform.position) || PlayerPowerupController.ShieldPowerupStatus == true)
         {
@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private bool IsWithinBoundaryExclusionZone(Vector3 position)
+    protected bool IsWithinBoundaryExclusionZone(Vector3 position)
     {
         // Check if the snake head is within the exclusion zone of the leftmost or rightmost boundary
         return position.x <= -_screenWidth + _boundaryCheckOffset ||

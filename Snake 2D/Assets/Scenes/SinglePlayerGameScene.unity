@@ -338,7 +338,7 @@ PrefabInstance:
     - target: {fileID: 7615972404655058683, guid: 5e01a18cd8b296b4999fce1f6361aa87, type: 3}
       propertyPath: playerController
       value: 
-      objectReference: {fileID: 745171023}
+      objectReference: {fileID: 745171026}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -701,7 +701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 745171021}
   - component: {fileID: 745171020}
-  - component: {fileID: 745171023}
+  - component: {fileID: 745171026}
   - component: {fileID: 745171025}
   - component: {fileID: 745171022}
   - component: {fileID: 745171024}
@@ -806,21 +806,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &745171023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745171019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac16cb9662801f04bbc28a949d2e59fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _snakeBody: {fileID: 963008492839025338, guid: 1dc87a0b9be5205438148ae2dde1132a, type: 3}
-  _camera: {fileID: 519420031}
-  _gameOverUIPanel: {fileID: 2054525903}
 --- !u!61 &745171024
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -878,6 +863,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d867ef71fc62d804a8561f881866277e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &745171026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745171019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d66f29b31d4164a9da124d6e1d7bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _snakeBody: {fileID: 963008492839025338, guid: 1dc87a0b9be5205438148ae2dde1132a, type: 3}
+  _camera: {fileID: 519420031}
+  _gameOverUIPanel: {fileID: 2054525903}
 --- !u!1 &884188444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,7 +1156,7 @@ PrefabInstance:
     - target: {fileID: 7485159645788120187, guid: 5283618549f84f64f95b94c2980ee04b, type: 3}
       propertyPath: playerController
       value: 
-      objectReference: {fileID: 745171023}
+      objectReference: {fileID: 745171026}
     - target: {fileID: 8663705668460079137, guid: 5283618549f84f64f95b94c2980ee04b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22
