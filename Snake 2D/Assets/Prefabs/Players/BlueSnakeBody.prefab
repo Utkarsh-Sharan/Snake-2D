@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 963008492839025338}
   - component: {fileID: 8560758401619175358}
   - component: {fileID: -2557006808980730001}
-  - component: {fileID: -751962142987688757}
+  - component: {fileID: 7202266847529214721}
   m_Layer: 0
   m_Name: BlueSnakeBody
   m_TagString: Untagged
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.29563373, y: 0.33140206}
   m_EdgeRadius: 0
---- !u!114 &-751962142987688757
+--- !u!114 &7202266847529214721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,6 +140,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8180678439371988418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17f23b55cf569614498fc2e0df42d655, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f21b8ec99d1dfd4a80f6add993309eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

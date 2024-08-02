@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerPowerupController : MonoBehaviour
+public class Player2PowerupController : MonoBehaviour
 {
     private static bool _plus5PowerupStatus;
     public static bool Plus5PowerupStatus { get { return _plus5PowerupStatus; } }
@@ -41,10 +41,4 @@ public class PlayerPowerupController : MonoBehaviour
         SoundManager.Instance.Play(Sounds.POWERUP_EFFECT_END);
         _shieldPowerupStatus = false;
     }
-}
-
-public enum PowerupType
-{
-    PLUS_5,
-    SHIELD,
 }

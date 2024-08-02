@@ -16,6 +16,8 @@ public class GameOverUIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _player1Score;
     [SerializeField] private TextMeshProUGUI _player2Score;
 
+    [SerializeField] private TextMeshProUGUI _coOpMatchEndStatus;
+
     [SerializeField] private Button _mainMenuButton;
     [SerializeField] private Button _quitButton;
 
@@ -32,6 +34,8 @@ public class GameOverUIController : MonoBehaviour
             _player1Score.text = $"Score: {ScoreManager.Instance.player1Score}";
             _player2Name.text = $"Player 2: {ScoreManager.Instance.player2Name}";
             _player2Score.text = $"Score: {ScoreManager.Instance.player2Score}";
+
+            _coOpMatchEndStatus.text = GameManager.CoOpMatchEndStatusString;
         }
 
         _mainMenuButton.onClick.AddListener(MainMenuButton);
