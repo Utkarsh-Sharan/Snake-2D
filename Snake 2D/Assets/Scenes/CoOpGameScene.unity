@@ -1528,7 +1528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1273656553}
   - component: {fileID: 1273656552}
-  - component: {fileID: 1273656551}
+  - component: {fileID: 1273656554}
   - component: {fileID: 1273656550}
   - component: {fileID: 1273656549}
   - component: {fileID: 1273656548}
@@ -1623,21 +1623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d867ef71fc62d804a8561f881866277e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1273656551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273656547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8d66f29b31d4164a9da124d6e1d7bab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _snakeBody: {fileID: 963008492839025338, guid: d3314b9b29c4eb7429c1add6e03a2a3d, type: 3}
-  _camera: {fileID: 1257027543}
-  _gameOverUIPanel: {fileID: 961193248}
 --- !u!212 &1273656552
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1705,6 +1690,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1273656554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273656547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa2d0414acdc64479553ee401a7f826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snakeBody: {fileID: 963008492839025338, guid: d3314b9b29c4eb7429c1add6e03a2a3d, type: 3}
+  mainCamera: {fileID: 1257027543}
+  gameOverUIPanel: {fileID: 961193248}
 --- !u!1 &1334691940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,9 +1977,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d66f29b31d4164a9da124d6e1d7bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _snakeBody: {fileID: 963008492839025338, guid: 1dc87a0b9be5205438148ae2dde1132a, type: 3}
-  _camera: {fileID: 1257027543}
-  _gameOverUIPanel: {fileID: 961193248}
+  snakeBody: {fileID: 963008492839025338, guid: 1dc87a0b9be5205438148ae2dde1132a, type: 3}
+  mainCamera: {fileID: 1257027543}
+  gameOverUIPanel: {fileID: 961193248}
 --- !u!61 &1861510607
 BoxCollider2D:
   m_ObjectHideFlags: 0

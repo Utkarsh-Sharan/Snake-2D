@@ -875,9 +875,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d66f29b31d4164a9da124d6e1d7bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _snakeBody: {fileID: 963008492839025338, guid: 1dc87a0b9be5205438148ae2dde1132a, type: 3}
-  _camera: {fileID: 519420031}
-  _gameOverUIPanel: {fileID: 2054525903}
+  snakeBody: {fileID: 963008492839025338, guid: 1dc87a0b9be5205438148ae2dde1132a, type: 3}
+  mainCamera: {fileID: 519420031}
+  gameOverUIPanel: {fileID: 2054525903}
 --- !u!1 &884188444
 GameObject:
   m_ObjectHideFlags: 0
