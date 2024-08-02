@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     private GameType _gameType;
     public GameType GameType { get { return _gameType; } set { _gameType = value; } }
 
+    private static string _coOpMatchEndStatusString;
+    public static string CoOpMatchEndStatusString { get { return _coOpMatchEndStatusString; } set { _coOpMatchEndStatusString = value; } }
+
     private void Awake()
     {
         if (_instance == null)

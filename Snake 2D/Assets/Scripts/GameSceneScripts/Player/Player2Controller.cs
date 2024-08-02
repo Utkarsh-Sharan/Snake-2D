@@ -49,11 +49,27 @@ public class Player2Controller : PlayerController
     {
         if (IsWithinBoundaryExclusionZone(transform.position) || Player2PowerupController.ShieldPowerupStatus == true)
         {
-            return; // Skip collision check
+            return; // Skip boundary and self collision check
         }
         else if (other.gameObject.GetComponent<BlueSnakeBodyPart>())
         {
             SoundManager.Instance.PlayMusic(Sounds.PLAYER_DEATH);
+
+            GameManager.CoOpMatchEndStatusString = $"This one belongs to {ScoreManager.Instance.currentPlayer1Name}!";
+            GameManager.Instance.GameOverHandler(gameOverUIPanel);
+        }
+        else if (Player1PowerupController.ShieldPowerupStatus == false && other.gameObject.GetComponent<GreenSnakeBodyPart>())
+        {
+            SoundManager.Instance.PlayMusic(Sounds.PLAYER_DEATH);
+
+            GameManager.CoOpMatchEndStatusString = $"This one belongs to {ScoreManager.Instance.currentPlayer2Name}!";
+            GameManager.Instance.GameOverHandler(gameOverUIPanel);
+        }
+        else if (other.gameObject.GetComponent<Player1Controller>())
+        {
+            SoundManager.Instance.PlayMusic(Sounds.PLAYER_DEATH);
+
+            GameManager.CoOpMatchEndStatusString = "Meh! It's a Draw :|";
             GameManager.Instance.GameOverHandler(gameOverUIPanel);
         }
     }
