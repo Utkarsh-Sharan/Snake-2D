@@ -98,18 +98,7 @@ public abstract class PlayerController : MonoBehaviour
         snakeBodyTransformList[0].position = snakeHeadPosition;
     }
 
-    protected void OnCollisionEnter2D(Collision2D other)
-    {
-        if (IsWithinBoundaryExclusionZone(transform.position) || Player1PowerupController.ShieldPowerupStatus == true)
-        {
-            return; // Skip collision check
-        }
-        else if (other.gameObject.GetComponent<SnakeBodyPart>())
-        {
-            SoundManager.Instance.PlayMusic(Sounds.PLAYER_DEATH);
-            GameManager.Instance.GameOverHandler(gameOverUIPanel);
-        }
-    }
+    protected abstract void OnCollisionEnter2D(Collision2D other);
 
     protected bool IsWithinBoundaryExclusionZone(Vector3 position)
     {

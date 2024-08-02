@@ -44,4 +44,17 @@ public class Player2Controller : PlayerController
 
         HandleSnakeFaceDirection(movementDirection);
     }
+
+    protected override void OnCollisionEnter2D(Collision2D other)
+    {
+        if (IsWithinBoundaryExclusionZone(transform.position) || Player2PowerupController.ShieldPowerupStatus == true)
+        {
+            return; // Skip collision check
+        }
+        else if (other.gameObject.GetComponent<BlueSnakeBodyPart>())
+        {
+            SoundManager.Instance.PlayMusic(Sounds.PLAYER_DEATH);
+            GameManager.Instance.GameOverHandler(gameOverUIPanel);
+        }
+    }
 }
