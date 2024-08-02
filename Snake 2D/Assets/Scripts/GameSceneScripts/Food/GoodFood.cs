@@ -27,9 +27,25 @@ public class GoodFood : FoodController
             SoundManager.Instance.Play(Sounds.PLAYER_ATE_FOOD);
 
             RandomizeFoodPosition();
-            playerController.CreateSnakeBody();
+            player1Controller.CreateSnakeBody();
 
             if(PlayerPowerupController.Plus5PowerupStatus == true)
+            {
+                scoreController.PlayerScoreController(+10);
+            }
+            else
+            {
+                scoreController.PlayerScoreController(+5);
+            }
+        }
+        else if (other.gameObject.GetComponent<Player2Controller>())
+        {
+            SoundManager.Instance.Play(Sounds.PLAYER_ATE_FOOD);
+
+            RandomizeFoodPosition();
+            player2Controller.CreateSnakeBody();
+
+            if (PlayerPowerupController.Plus5PowerupStatus == true)
             {
                 scoreController.PlayerScoreController(+10);
             }

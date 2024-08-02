@@ -339,6 +339,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 745171026}
+    - target: {fileID: 7615972404655058683, guid: 5e01a18cd8b296b4999fce1f6361aa87, type: 3}
+      propertyPath: player1Controller
+      value: 
+      objectReference: {fileID: 745171026}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1155,6 +1159,10 @@ PrefabInstance:
       objectReference: {fileID: 2100927881}
     - target: {fileID: 7485159645788120187, guid: 5283618549f84f64f95b94c2980ee04b, type: 3}
       propertyPath: playerController
+      value: 
+      objectReference: {fileID: 745171026}
+    - target: {fileID: 7485159645788120187, guid: 5283618549f84f64f95b94c2980ee04b, type: 3}
+      propertyPath: player1Controller
       value: 
       objectReference: {fileID: 745171026}
     - target: {fileID: 8663705668460079137, guid: 5283618549f84f64f95b94c2980ee04b, type: 3}
