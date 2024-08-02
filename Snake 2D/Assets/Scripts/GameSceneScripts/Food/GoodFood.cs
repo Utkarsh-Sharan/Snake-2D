@@ -29,7 +29,7 @@ public class GoodFood : FoodController
             RandomizeFoodPosition();
             player1Controller.CreateSnakeBody();
 
-            if(PlayerPowerupController.Plus5PowerupStatus == true)
+            if(Player1PowerupController.Plus5PowerupStatus == true)
             {
                 scoreController.Player1ScoreController(+10);
             }
@@ -45,7 +45,7 @@ public class GoodFood : FoodController
             RandomizeFoodPosition();
             player2Controller.CreateSnakeBody();
 
-            if (PlayerPowerupController.Plus5PowerupStatus == true)
+            if (Player2PowerupController.Plus5PowerupStatus == true)
             {
                 scoreController.Player2ScoreController(+10);
             }

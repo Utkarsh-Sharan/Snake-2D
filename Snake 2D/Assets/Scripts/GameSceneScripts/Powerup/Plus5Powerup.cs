@@ -33,7 +33,16 @@ public class Plus5Powerup : PowerupController
         {
             SoundManager.Instance.Play(Sounds.POWERUP_EFFECT_START);
 
-            PlayerPowerupController playerPowerupController = other.gameObject.GetComponent<PlayerPowerupController>();
+            Player1PowerupController playerPowerupController = other.gameObject.GetComponent<Player1PowerupController>();
+            playerPowerupController.ActivatePowerup(PowerupType.PLUS_5);
+
+            Destroy(this.gameObject);
+        }
+        else if (other.gameObject.GetComponent<Player2Controller>())
+        {
+            SoundManager.Instance.Play(Sounds.POWERUP_EFFECT_START);
+
+            Player2PowerupController playerPowerupController = other.gameObject.GetComponent<Player2PowerupController>();
             playerPowerupController.ActivatePowerup(PowerupType.PLUS_5);
 
             Destroy(this.gameObject);

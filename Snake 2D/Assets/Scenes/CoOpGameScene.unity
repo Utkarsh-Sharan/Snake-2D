@@ -1417,7 +1417,7 @@ GameObject:
   - component: {fileID: 1273656553}
   - component: {fileID: 1273656552}
   - component: {fileID: 1273656554}
-  - component: {fileID: 1273656550}
+  - component: {fileID: 1273656555}
   - component: {fileID: 1273656549}
   - component: {fileID: 1273656548}
   m_Layer: 0
@@ -1499,18 +1499,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1273656550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273656547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d867ef71fc62d804a8561f881866277e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1273656552
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1593,6 +1581,18 @@ MonoBehaviour:
   snakeBody: {fileID: 963008492839025338, guid: d3314b9b29c4eb7429c1add6e03a2a3d, type: 3}
   mainCamera: {fileID: 1257027543}
   gameOverUIPanel: {fileID: 961193248}
+--- !u!114 &1273656555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273656547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5db4810136107499add1ea8ed6c775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1297917313
 GameObject:
   m_ObjectHideFlags: 0

@@ -100,7 +100,7 @@ public abstract class PlayerController : MonoBehaviour
 
     protected void OnCollisionEnter2D(Collision2D other)
     {
-        if (IsWithinBoundaryExclusionZone(transform.position) || PlayerPowerupController.ShieldPowerupStatus == true)
+        if (IsWithinBoundaryExclusionZone(transform.position) || Player1PowerupController.ShieldPowerupStatus == true)
         {
             return; // Skip collision check
         }
