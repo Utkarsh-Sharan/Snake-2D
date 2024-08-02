@@ -31,13 +31,14 @@ public class GameManager : MonoBehaviour
         {
             case GameType.SINGLE_PLAYER:
                 CheckForBestSinglePlayer();
-                ScoreManager.Instance.LoadPlayerData();
+                ScoreManager.Instance.LoadSinglePlayerData();
                 gameOverUIPanel.SetActive(true);
                 Time.timeScale = 0f;
                 break;
 
             case GameType.CO_OP:
                 SaveCoOpPlayers();
+                ScoreManager.Instance.LoadCoOpPlayersData();
                 gameOverUIPanel.SetActive(true);
                 Time.timeScale = 0f;
                 break;

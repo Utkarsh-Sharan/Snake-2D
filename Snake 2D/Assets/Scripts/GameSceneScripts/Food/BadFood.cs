@@ -22,13 +22,21 @@ public class BadFood : FoodController
 
     protected override void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<PlayerController>())
+        if (other.gameObject.GetComponent<Player1Controller>())
         {
             SoundManager.Instance.Play(Sounds.PLAYER_ATE_FOOD);
 
             RandomizeFoodPosition();
-            playerController.DestroySnakeBody();
-            scoreController.PlayerScoreController(-5);
+            player1Controller.DestroySnakeBody();
+            scoreController.Player1ScoreController(-5);
+        }
+        else if (other.gameObject.GetComponent<Player2Controller>())
+        {
+            SoundManager.Instance.Play(Sounds.PLAYER_ATE_FOOD);
+
+            RandomizeFoodPosition();
+            player2Controller.DestroySnakeBody();
+            scoreController.Player2ScoreController(-5);
         }
     }
 }

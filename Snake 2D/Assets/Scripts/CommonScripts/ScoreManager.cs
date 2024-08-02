@@ -80,10 +80,10 @@ public class ScoreManager : MonoBehaviour   //will handle player data (name and 
         data.player2Score = player2Score;
 
         string json = JsonUtility.ToJson(data);
-        File.WriteAllText(Application.persistentDataPath + "/saveFile.json", json);
+        File.WriteAllText(Application.persistentDataPath + "/saveFile1.json", json);
     }
 
-    public void LoadPlayerData()
+    public void LoadSinglePlayerData()
     {
         string path = Application.persistentDataPath + "/saveFile.json";
         if (File.Exists(path))
@@ -94,8 +94,17 @@ public class ScoreManager : MonoBehaviour   //will handle player data (name and 
             SaveBestSinglePlayerData data1 = JsonUtility.FromJson<SaveBestSinglePlayerData>(json);
             bestPlayerName = data1.bestPlayerName;
             bestPlayerScore = data1.bestPlayerScore;
+        }
+    }
 
-            //getting co-op players data from load file
+    public void LoadCoOpPlayersData()
+    {
+        string path = Application.persistentDataPath + "/saveFile1.json";
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+
+            //getting co-op players data from save file
             SaveCoOpPlayerData data2 = JsonUtility.FromJson<SaveCoOpPlayerData>(json);
             player1Name = data2.player1Name;
             player1Score = data2.player1Score;

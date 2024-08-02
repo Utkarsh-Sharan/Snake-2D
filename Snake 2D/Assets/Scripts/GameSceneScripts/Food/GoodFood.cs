@@ -22,20 +22,36 @@ public class GoodFood : FoodController
 
     protected override void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<PlayerController>())
+        if (other.gameObject.GetComponent<Player1Controller>())
         {
             SoundManager.Instance.Play(Sounds.PLAYER_ATE_FOOD);
 
             RandomizeFoodPosition();
-            playerController.CreateSnakeBody();
+            player1Controller.CreateSnakeBody();
 
             if(PlayerPowerupController.Plus5PowerupStatus == true)
             {
-                scoreController.PlayerScoreController(+10);
+                scoreController.Player1ScoreController(+10);
             }
             else
             {
-                scoreController.PlayerScoreController(+5);
+                scoreController.Player1ScoreController(+5);
+            }
+        }
+        else if (other.gameObject.GetComponent<Player2Controller>())
+        {
+            SoundManager.Instance.Play(Sounds.PLAYER_ATE_FOOD);
+
+            RandomizeFoodPosition();
+            player2Controller.CreateSnakeBody();
+
+            if (PlayerPowerupController.Plus5PowerupStatus == true)
+            {
+                scoreController.Player2ScoreController(+10);
+            }
+            else
+            {
+                scoreController.Player2ScoreController(+5);
             }
         }
     }
