@@ -28,7 +28,7 @@ public class BadFood : FoodController
 
             RandomizeFoodPosition();
             player1Controller.DestroySnakeBody();
-            scoreController.PlayerScoreController(-5);
+            scoreController.Player1ScoreController(-5);
         }
         else if (other.gameObject.GetComponent<Player2Controller>())
         {
@@ -36,7 +36,7 @@ public class BadFood : FoodController
 
             RandomizeFoodPosition();
             player2Controller.DestroySnakeBody();
-            scoreController.PlayerScoreController(-5);
+            scoreController.Player2ScoreController(-5);
         }
     }
 }

@@ -73,7 +73,9 @@ public class MenuUIController : MonoBehaviour
     {
         SoundManager.Instance.Play(Sounds.BUTTON_CLICK);
 
-        ScoreManager.Instance.LoadPlayerData();
+        ScoreManager.Instance.LoadSinglePlayerData();
+        ScoreManager.Instance.LoadCoOpPlayersData();
+
         _bestPlayerName.text = $"Best Player: {ScoreManager.Instance.bestPlayerName}";
         _bestPlayerScore.text = $"Score: {ScoreManager.Instance.bestPlayerScore}";
 

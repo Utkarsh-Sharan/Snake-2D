@@ -2219,8 +2219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc2a2e5b794dbb43a77bf96bfdaf41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentPlayerName: {fileID: 2057081544}
-  _playerScoreText: {fileID: 1225979135}
+  _currentPlayer1Name: {fileID: 2057081544}
+  _player1ScoreText: {fileID: 1225979135}
   _gameOverUIPanel: {fileID: 2054525903}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
