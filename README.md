@@ -2,6 +2,10 @@
 Classic 2D Snake Game in Unity 🎮
 Welcome to the Classic 2D Snake Game project! This Unity-based game brings the timeless Snake experience with some exciting features and enhancements. Below is a detailed overview of the game and its features.
 
+## ⚠️ **Archived Project Notice**  
+This Unity project is no longer maintained and may contain unpatched binaries affected by CVE-2025-59489.  
+Please do not use or distribute without applying Unity’s official security patch.
+
 🚀 Features
 
 🕹️ Core Gameplay
@@ -56,5 +60,3 @@ Head-to-Head Collision: Results in a draw if both players collide head-on.
 Shield Interaction: If Player 1 has collected a shield powerup, Player 2’s collision with Player 1’s body will not eliminate Player 1, and the game continues.
 
 Watch Gameplay here: https://www.loom.com/share/2ec9442ed9964868b14c118471a20353?sid=af1e1ad6-1512-4b9f-9333-e11b7dd6df0d
-
-Playable Link: https://quirexo.itch.io/snake-2d
